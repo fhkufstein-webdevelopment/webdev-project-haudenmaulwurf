@@ -83,6 +83,13 @@ class User extends Database
 		exit();
 	}
 
+	public function redirectToGame(){
+        header('Location: '.SCOREBOARD_URL);
+        header('Status: 303');
+        exit();
+
+    }
+
 	public function login($username, $password)
 	{
 		$sql = "SELECT `id`,`password` FROM `user` WHERE `name`='" . $this->escapeString($username) . "'";
@@ -203,7 +210,10 @@ class User extends Database
 
 	public static function deleteUser($id)
 	{
-		//@TODO
+        $db = new Database();
+
+        $sql = "DELETE FROM user WHERE id=".intval($id);
+        $db->query($sql);
 	}
 
 	public static function updateUser($data)

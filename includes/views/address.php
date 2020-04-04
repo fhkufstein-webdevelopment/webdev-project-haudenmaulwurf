@@ -21,6 +21,10 @@
 			<label for="city">Ort:</label>
 			<input type="text" name="city" class="form-control" id="city" value="<?php echo $this->city; ?>">
 		</div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" name="email" class="form-control" id="email" value="<?php echo $this->email; ?>">
+        </div>
 		<?php if($this->id): ?>
 			<input type="hidden" name="id" value="<?php echo $this->id; ?>">
 		<?php endif; ?>

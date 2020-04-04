@@ -8,13 +8,15 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
 	<?php if($this->current == "login"): ?>
 		<link href="css/toastr.min.css" rel="stylesheet">
 	<?php endif; ?>
-
-		<link href="css/main.css" rel="stylesheet">
-
-
+    <?php if($this->current == "scoreboard"): ?>
+        <link href="css/scoreboard.css" rel="stylesheet">
+    <?php else: ?>
+        <link href="css/main.css" rel="stylesheet">
+    <?php endif; ?>
 		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 
@@ -32,8 +34,8 @@
 <header>
 	<div class="inner">
 		<div class="logo">
-			<div class="name">Adressverwaltung</div>
-			<div class="version">1.0</div>
+		<!--	<div class="name">HAU DEN MAULWURF</div>
+			<div class="version">1.0</div> -->
 		</div>
 
 		<?php if(LOGGED_IN == true): ?>
@@ -47,7 +49,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a href="/" class="navbar-brand active">Adressverwaltung</a>
+						<a href="/" class="navbar-brand active">Hau den Maulwurf</a>
 					</div>
 
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

@@ -43,7 +43,7 @@ class AddressModel
 	{
 		$db = new Database();
 
-		$sql = "INSERT INTO address(userId,firstname,lastname,street,zip,city) VALUES('".$db->escapeString($data['userId'])."','".$db->escapeString($data['firstname'])."','".$db->escapeString($data['lastname'])."','".$db->escapeString($data['street'])."','".$db->escapeString($data['zip'])."','".$db->escapeString($data['city'])."')";
+		$sql = "INSERT INTO address(userId,firstname,lastname,street,zip,city, email) VALUES('".$db->escapeString($data['userId'])."','".$db->escapeString($data['firstname'])."','".$db->escapeString($data['lastname'])."','".$db->escapeString($data['street'])."','".$db->escapeString($data['zip'])."','".$db->escapeString($data['city'])."','".$db->escapeString($data['email'])."')";
 		$db->query($sql);
 
 		$data['id'] = $db->insertId();
@@ -55,7 +55,7 @@ class AddressModel
 	{
 		$db = new Database();
 
-		$sql = "UPDATE address SET firstname='".$db->escapeString($data['firstname'])."',lastname='".$db->escapeString($data['lastname'])."',street='".$db->escapeString($data['street'])."',zip='".$db->escapeString($data['zip'])."',city='".$db->escapeString($data['city'])."' WHERE id=".intval($data['id']);
+		$sql = "UPDATE address SET firstname='".$db->escapeString($data['firstname'])."',lastname='".$db->escapeString($data['lastname'])."',street='".$db->escapeString($data['street'])."',zip='".$db->escapeString($data['zip'])."',city='".$db->escapeString($data['city'])."',email='".$db->escapeString($data['email'])."' WHERE id=".intval($data['id']);
 		$db->query($sql);
 
 		return (object) $data;

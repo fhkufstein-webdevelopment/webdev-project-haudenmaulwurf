@@ -8,7 +8,13 @@ $route['/index.html'] = array('controller' => 'IndexController', 'uniqueName' =>
 
 $route['/login'] = array('controller' => 'LoginController', 'uniqueName' => 'login');
 $route['/login.html'] = array('controller' => 'LoginController', 'uniqueName' => 'login');
+$route['/anmelden'] = array('controller' => 'LoginController', 'uniqueName' => 'login');
 
 $route['/logout'] = array('controller' => 'LogoutController', 'uniqueName' => 'logout');
 $route['/logout.html'] = array('controller' => 'LogoutController', 'uniqueName' => 'logout');
+
+$route['/adresse'] = array('controller' => 'AddressDetailController', 'uniqueName' => 'addressdetail');
+
+$route['/scoreboard'] = array('controller' => 'GameController', 'uniqueName' => 'scoreboard');
+$route['/scoreboard.html'] = array('controller' => 'GameController', 'uniqueName' => 'scoreboard');
 

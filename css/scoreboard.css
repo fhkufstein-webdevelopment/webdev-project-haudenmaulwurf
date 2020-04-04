@@ -1,0 +1,43 @@
+
+.score_main {
+    background-image: url("../images/background.jpg");
+    margin-top: -20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.score_inner {
+    background-size: 100%;
+    background-color: lightgreen;
+    width: 990px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Comic Sans MS";
+    padding: 60px;
+}
+
+
+table {
+
+    background-color: lightblue;
+    width: 743px;
+    margin: 0 auto;
+    font-size: 20px;
+    text-align: left;
+}
+
+h1 {
+    padding-bottom: 10px;
+    font-size: 55px;
+    text-transform:lowercase;
+}
+
+h3 {
+    padding-top: 15px;
+}
+
+

@@ -23,7 +23,7 @@ echo $this->header;
             <tbody>
             <?php foreach($this->addresses as $address): ?>
                 <tr>
-                    <td><?php echo $address->id; ?></td>
+                    <td><a href="adresse?id=<?php echo $address->id; ?>"><?php echo $address->id; ?></a></td>
                     <td><?php echo $address->lastname; ?></td>
                     <td><?php echo $address->firstname; ?></td>
                     <td><?php echo $address->city; ?></td>
@@ -34,7 +34,7 @@ echo $this->header;
             </tbody>
         </table>
         <?php else: ?>
-                <p>&nbsp;</p>
+                <p>&nbsp;&nbsp;</p>
                 <div class="alert alert-info">Noch keine Adressen vorhanden - Sie können über den Button <strong>Neue Adresse anlegen</strong> eine neue Adresse Ihrer Adressverwaltung hinzufügen.</div>
         <?php endif; ?>
 

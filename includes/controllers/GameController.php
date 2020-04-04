@@ -12,7 +12,7 @@ class GameController extends Controller
         $this->view->username = $this->user->username;
 
         //$this->checkForSaveScorePost();
-        $this->view->scores = GameModel::getScoreForOneUserById($this->user->id);
+        $this->view->userscores = GameModel::getScoreForOneUserById($this->user->id);
 
         $this->view->scores = GameModel::getTotalScores();
     }

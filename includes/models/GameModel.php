@@ -17,57 +17,51 @@ class GameModel
     public static function getScoreForOneUserById($userid)
     {
         $db = new Database();
-
-        $sql = "SELECT points, tmsp FROM score WHERE user_id =" .intval($userid);
+        $id = intval($userid);
+      //  $sql = "SELECT points, tmsp FROM score WHERE user_id =" .intval($userid);
+        $sql = "SELECT points, tmsp FROM score WHERE user_id = $id ORDER BY points DESC LIMIT 5";
         $result = $db->query($sql);
 
+
         if($db->numRows($result) > 0) {     //Wenn in der Abfrage die Anzahl der Ausgaben größer ist als 0, dann...
-            while($row = mysqli_fetch_object($result))  //solange ein Eintrag aus der Variable result als Arrayinhalt in die Variable row geschrieben wird führe die Schleife aus
-            {
-                echo $row->points;
-                echo "<br>";
 
-
-            }
-            echo "<br>";
-        }
-        else {
-            echo "<h1>Sie haben noch keine Scores</h1>";
-        }
-
-
-        /*if ($db->numRows($result) > 0) {
             $scoreArray = array();
 
-            while ($row = $db->fetchObject($result)) {
+            while($row = $db->fetchObject($result))  //solange ein Eintrag aus der Variable result als Arrayinhalt in die Variable row geschrieben wird führe die Schleife aus
+            {
                 $scoreArray[] = $row;
             }
+
             return $scoreArray;
         }
-        return null;*/
+        else {
+            return null;
+        }
+
     }
 
     public static function getTotalScores(){
         $db = new Database();
 
-        $sql = "SELECT points, tmsp FROM score ";
+        $sql = "SELECT score.points, `user`.name FROM score LEFT JOIN `user` on score.user_id = user.id ORDER BY points DESC LIMIT 5";
         $result = $db->query($sql);
 
         if($db->numRows($result) > 0) {     //Wenn in der Abfrage die Anzahl der Ausgaben größer ist als 0, dann...
-            while($row = mysqli_fetch_object($result))  //solange ein Eintrag aus der Variable result als Arrayinhalt in die Variable row geschrieben wird führe die Schleife aus
+
+            $scoreArray = array();
+
+            while($row = $db->fetchObject($result))  //solange ein Eintrag aus der Variable result als Arrayinhalt in die Variable row geschrieben wird führe die Schleife aus
             {
-                echo $row->points;
-                echo "<br />";
+                $scoreArray[] = $row;
             }
 
+            return $scoreArray;
         }
         else {
-            echo "<h1>Es gibt noch keine Scores</h1>";
+            return null;
         }
 
     }
-
-
 
     public static function deleteScore($id)
     {

@@ -8,32 +8,54 @@ echo $this->header;
 <div class = "score_inner">
 
 <h1>Scoreboard </h1>
-    <p><h3>Hier siehst du <strong>deine besten Ergebnisse</strong> sowie die <strong>generellen Highscores </strong></h3></p>
+    <p><h3>Hier siehst du deine besten Ergebnisse sowie die generellen Highscores</h3></p>
     <br><br>
 
-<table class ="scores">
-    <tr>
-        <th>Deine Highscores</th>
-        <th colspan="2">Highscores global</th>
-        <th></th>
-    </tr>
-    <tr>
-        <td>Punkte</td>
-        <td>Spieler</td>
-        <td>Punkte</td>
-    </tr>
-    <tr>
-        <td>Punkte</td>
-        <td>Spieler</td>
-        <td>Punkte</td>
+<div class = "tabelle1">
+    <?php if($this->userscores): ?>
+        <table class ="userscores">
+            <tr>
+                <th colspan="2">Deine Highscores</th>
 
-    </tr>
+            </tr>
+            <?php foreach($this->userscores as $userscoreObj): ?>
+                <tr>
+                    <td><?php echo $userscoreObj->tmsp; ?></td>
+                    <td class="tabelle1_punkte"><?php echo $userscoreObj->points; ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+    <?php else: ?>
+        <p>Es sind noch keine HighScore Einträge vorhanden!</p>
+    <?php endif; ?>
+    <br>
+</div>
+    <div class ="tabelle2">
+<?php if($this->scores): ?>
 
-</table>
+    <table class ="scores">
+        <tr>
+            <th colspan="2">Highscores global</th>
+        </tr>
+        <?php foreach($this->scores as $scoreObj): ?>
+            <tr>
+                <td><?php echo $scoreObj->name; ?></td>
+                <td class="tabelle2_punkte"><?php echo $scoreObj->points; ?></td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+<?php else: ?>
+    <p>Es sind noch keine HighScore Einträge vorhanden!</p>
+<?php endif; ?>
+
 </div>
 </div>
+</div>
+<?php
 
+echo $this->footer;
 
+?>
 
 
 

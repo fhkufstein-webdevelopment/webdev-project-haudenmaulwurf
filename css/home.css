@@ -1,5 +1,6 @@
+/* Mein Vorschlag zum Stylen der HomeSite, muss nicht übernommen werden */
 
-.score_main {
+.home_main {
     background-image: url("../images/background.jpg");
     margin-top: -20px;
     background-repeat: no-repeat;
@@ -10,7 +11,7 @@
 }
 
 
-.score_inner {
+.home_inner {
     background-size: 100%;
     background-image: url("../images/erde2.png");
     background-repeat: no-repeat;
@@ -24,50 +25,13 @@
 
 }
 
-table {
-    width: 355px;
-    font-size: 20px;
-}
 
 h1 {
     padding-bottom: 0px;
     font-size: 55px;
-    text-transform: uppercase;
+    text-transform:uppercase;
     font-weight: bold;
-}
-
-
-th{
-    text-align: center;
-    padding-bottom:20px;
-    font-size: 30px;
-}
-
-td {
-    font-size: 25px;
-    padding-left: 20px;
-    text-align: left;
-}
-
-.tabelle1 {
-    float: left;
-
-}
-
-.tabelle2{
-    float: right;
-
-}
-
-.tabelle1_punkte{
-    text-align: right;
-    padding-right: 20px;
-}
-
-
-.tabelle2_punkte{
-    text-align: right;
-    padding-right: 20px;
+    padding-top: 20px;
 }
 
 .footer{
@@ -83,15 +47,43 @@ h10{
     color: white;
     font-size: 15px;
     padding-left: 15px;
-
 }
 
-.td_highscores:hover{
-    color: #CD853F;
+.buttons {
+    color: black;
+    font-size: 25px;
+    width: 700px;
+    margin: 0 auto;
+    border-color: white;
 }
 
-.td_userscores:hover{
-    color: #CD853F;
+
+#start_game{
+    width:200px;
+    height: 100px;
+    margin-right: 35px;
 }
 
+#view_rules{
+    width:200px;
+    height: 100px;
 
+}
+#view_score{
+    width:200px;
+    height: 100px;
+    margin-left: 35px;
+}
+
+#start_game:hover{
+    background-color: #CD853F;
+    border-color: #CD853F;
+}
+#view_score:hover{
+    background-color: #CD853F;
+    border-color: #CD853F;
+}
+#view_rules:hover{
+    background-color: #CD853F;
+    border-color: #CD853F;
+}

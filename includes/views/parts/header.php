@@ -11,9 +11,10 @@
 
 	<?php if($this->current == "login"): ?>
 		<link href="css/toastr.min.css" rel="stylesheet">
-	<?php endif; ?>
-    <?php if($this->current == "scoreboard"): ?>
+    <?php elseif($this->current == "scoreboard"): ?>
         <link href="css/scoreboard.css" rel="stylesheet">
+    <?php elseif($this->current == "home"): ?>          <!-- Mein Stylesheet zum Vorschlag meiner HomeSite, muss nicht übernommen werden! -->
+        <link href="css/home.css" rel="stylesheet">
     <?php else: ?>
         <link href="css/main.css" rel="stylesheet">
     <?php endif; ?>

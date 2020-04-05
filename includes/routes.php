@@ -17,4 +17,9 @@ $route['/adresse'] = array('controller' => 'AddressDetailController', 'uniqueNam
 
 $route['/scoreboard'] = array('controller' => 'GameController', 'uniqueName' => 'scoreboard');
 $route['/scoreboard.html'] = array('controller' => 'GameController', 'uniqueName' => 'scoreboard');
+$route['/scoreboard.php'] = array('controller' => 'GameController', 'uniqueName' => 'scoreboard');
+
+$route['/home'] = array('controller' => 'HomeController', 'uniqueName' => 'home');
+$route['/home.html'] = array('controller' => 'HomeController', 'uniqueName' => 'home');
+$route['/home.php'] = array('controller' => 'HomeController', 'uniqueName' => 'home');
 

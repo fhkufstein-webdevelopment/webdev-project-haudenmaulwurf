@@ -134,16 +134,14 @@ function init() {
   // senden der daten am ende
   $("#endButton").click(function () {
     console.log(settings.counter);
-    let thishere = document.getElementById("pointsCounter");
-    // Daten senden an
+    // Daten senden an DB
     $.ajax({
       url: '/webdev-project-haudenmaulwurf/scoreboard',
       type: 'POST',
       dataType: "json",
       data: {'action':'saveScore', 'score': settings.counter}
     }).done(function() {
-      console.log("heya");
-      window.location.href = "#"; // "./index.html"
+      window.location.href = "/webdev-project-haudenmaulwurf/scoreboard";
     });
 
   });

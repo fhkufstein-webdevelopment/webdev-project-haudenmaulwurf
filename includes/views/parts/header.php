@@ -15,11 +15,14 @@
         <link href="css/scoreboard.css" rel="stylesheet">
     <?php elseif($this->current == "home"): ?>          <!-- Mein Stylesheet zum Vorschlag meiner HomeSite, muss nicht übernommen werden! -->
         <link href="css/home.css" rel="stylesheet">
+    <?php elseif($this->current == "game"): ?>
+        <link href="css/game.css" rel="stylesheet">
     <?php else: ?>
         <link href="css/main.css" rel="stylesheet">
     <?php endif; ?>
-		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
 	<?php if($this->current == "index"): ?>
 		<script type="text/javascript" src="js/core.js"></script>

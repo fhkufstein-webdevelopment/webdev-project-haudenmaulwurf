@@ -1,5 +1,5 @@
 <?php
-class GameModel
+class ScoreboardModel
 {
     public static function createAndSaveScore($userid, $score)
     {

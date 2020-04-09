@@ -1,11 +1,20 @@
+@font-face {
+    font-family: "Nunito";
+    src: url("../fonts/Nunito-Bold.ttf");
+}
+
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
 
 .score_main {
     background-image: url("../images/background.jpg");
-    margin-top: -20px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 100vw;
     height: 100vh;
 }
 
@@ -17,11 +26,10 @@
     width: 990px;
     margin: 0 auto;
     text-align: center;
-    font-family: "Comic Sans MS";
+    font-family: Nunito;
     padding: 60px;
     color: white;
-    height: 900px;
-
+    height: 80%;
 }
 
 table {
@@ -71,6 +79,9 @@ td {
 }
 
 .footer{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
     background-image: url("../images/erde.jpg");
     background-repeat: no-repeat;
     height: 60px;
@@ -79,7 +90,7 @@ td {
 }
 
 h10{
-    font-family: "Comic Sans MS";
+    font-family: Nunito;
     color: white;
     font-size: 15px;
     padding-left: 15px;

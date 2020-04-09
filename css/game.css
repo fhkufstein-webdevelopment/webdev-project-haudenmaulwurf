@@ -1,0 +1,189 @@
+@font-face {
+    font-family: "Nunito";
+    src: url("../fonts/Nunito-Bold.ttf");
+}
+
+body {
+    background-color: lightgray;
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Nunito;
+}
+
+/* make screen non selectable */
+::selection {
+    color: none;
+    background: none;
+}
+
+img {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+/* flexbox */
+#game {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: auto;
+    margin-top: 100px;
+    width: 60vw;
+    height: 70vh;
+    grid-column-gap: 30px;
+    align-items: center;
+    justify-items: center;
+    border: solid 1px black;
+    padding-top: 100px;
+    background-color: #3b563f;
+    border-radius: 25px;
+}
+
+#game.noshow div{display:none;}
+
+.grid-item {
+    padding: 20px;
+}
+
+.mole {
+    height: 100px;
+    visibility: hidden;
+}
+
+/* Different Mole Types */
+.redMole {
+    content: url("../images/redMole.svg");
+}
+
+.yellowMole {
+    content: url("../images/yellowMole.svg");
+}
+
+.dirt {
+    position: absolute;
+    height: 100px;
+    width: 150px;
+    z-index: 10;
+    background-image: url("../images/dirt.svg");
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+}
+
+.alive {
+    visibility: visible;
+    position: relative;
+    animation-name: moleRising;
+    animation-duration: 2s; /* set in js when doing difficulties */
+    animation-fill-mode: forwards;
+    z-index: 1;
+}
+
+@keyframes moleRising {
+    from {
+        bottom: 0%;
+    }
+    50% {
+        bottom: 43%;
+    }
+    to {
+        bottom: 0%;
+        visibility: hidden;
+    }
+}
+
+
+#timer {
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    right: calc(20vw - 300px);
+    border: 2px solid black;
+    border-radius: 25px;
+    top: 20vh;
+}
+
+#pointsCounter {
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    right: calc(20vw - 300px);
+    top: 32vh;
+    border: 2px solid black;
+    border-radius: 25px;
+
+}
+
+#additionalItems {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+}
+
+
+/* Buttons */
+#buttons {
+    width: 200px;
+    height: 200px;
+}
+
+#buttons button {
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+button:hover {
+    background-color: lightgray;
+}
+
+#buttons, #endArea {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 30%;
+    z-index: 10;
+}
+
+#endArea {
+    width: 200px;
+    top: 40%;
+    height: 200px;
+    z-index: 100;
+    text-align: center;
+    display: none;
+}
+
+#endButton {
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.footer{
+    padding-left: 10px;
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background-image: url("../images/erde.jpg");
+    background-repeat: no-repeat;
+    height: 60px;
+    background-size: cover;
+    background-position: center;
+}

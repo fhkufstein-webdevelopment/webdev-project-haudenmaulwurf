@@ -13,7 +13,6 @@ body {
     background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: "Comic Sans MS";
 }
 
 /* make screen non selectable */
@@ -133,6 +132,8 @@ img {
     text-align: center;
     vertical-align: middle;
     line-height: 100px;
+    font-family: "Comic Sans MS";
+
 }
 
 
@@ -161,6 +162,8 @@ button:hover {
     margin-right: auto;
     top: 30%;
     z-index: 10;
+    font-family: "Comic Sans MS";
+
 }
 
 #endArea {

@@ -130,52 +130,51 @@ function init() {
         // div an game-bereich hängen
         settings.game.appendChild(mole);
     }
+}
 
-
-    // senden der daten am ende
-    $("#endButton").click(function () {
-        console.log(settings.counter);
-        // Daten senden an DB
-        $.ajax({
-            url: '/webdev-project-haudenmaulwurf/scoreboard',
-            type: 'POST',
-            dataType: "json",
-            data: {'action':'saveScore', 'score': settings.counter}
-        }).done(function() {
-            window.location.href = "/webdev-project-haudenmaulwurf/scoreboard";
-        });
-
+// senden der daten am ende
+$("#endButton").click(function () {
+    // Daten senden an DB
+    $.ajax({
+        url: '/webdev-project-haudenmaulwurf/scoreboard',
+        type: 'POST',
+        dataType: "json",
+        data: {'action':'saveScore', 'score': settings.counter}
+    }).done(function() {
+        window.location.href = "/webdev-project-haudenmaulwurf/scoreboard";
     });
 
-    // auswählen welche farbe der maulwurf haben soll
-    function colorSetter(moleImage) {
-        let alreadySet =
-            moleImage.classList.contains("normalMole") ||
-            moleImage.classList.contains("yellowMole") ||
-            moleImage.classList.contains("redMole");
+});
 
-        if (settings.difficulty == 1 && !alreadySet) {
-            if (Math.random() < 0.3) {
-                moleImage.classList.add("redMole");
-            } else {
-                moleImage.classList.add("normalMole");
-            }
-        } else if (settings.difficulty == 2 && !alreadySet) {
-            if (Math.random() < 0.1) {
-                moleImage.classList.add("yellowMole");
-            } else if (Math.random() < 0.2) {
-                moleImage.classList.add("redMole");
-            } else {
-                moleImage.classList.add("normalMole");
-            }
-        } else if (settings.difficulty == 3 && !alreadySet) {
-            if (Math.random() < 0.3) {
-                moleImage.classList.add("yellowMole");
-            } else if (Math.random() < 0.2) {
-                moleImage.classList.add("redMole");
-            } else {
-                moleImage.classList.add("normalMole");
-            }
+// auswählen welche farbe der maulwurf haben soll
+function colorSetter(moleImage) {
+    let alreadySet =
+        moleImage.classList.contains("normalMole") ||
+        moleImage.classList.contains("yellowMole") ||
+        moleImage.classList.contains("redMole");
+
+    if (settings.difficulty == 1 && !alreadySet) {
+        if (Math.random() < 0.3) {
+            moleImage.classList.add("redMole");
+        } else {
+            moleImage.classList.add("normalMole");
+        }
+    } else if (settings.difficulty == 2 && !alreadySet) {
+        if (Math.random() < 0.1) {
+            moleImage.classList.add("yellowMole");
+        } else if (Math.random() < 0.2) {
+            moleImage.classList.add("redMole");
+        } else {
+            moleImage.classList.add("normalMole");
+        }
+    } else if (settings.difficulty == 3 && !alreadySet) {
+        if (Math.random() < 0.3) {
+            moleImage.classList.add("yellowMole");
+        } else if (Math.random() < 0.2) {
+            moleImage.classList.add("redMole");
+        } else {
+            moleImage.classList.add("normalMole");
         }
     }
 }
+

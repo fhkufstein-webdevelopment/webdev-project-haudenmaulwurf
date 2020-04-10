@@ -53,7 +53,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a href="/" class="navbar-brand active">Hau den Maulwurf</a>
+						<a href="/webdev-project-haudenmaulwurf/home" class="navbar-brand active">Hau den Maulwurf</a>
 					</div>
 
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

@@ -1,6 +1,6 @@
 <?php
 
-class ScoreController extends Controller
+class ScoreboardController extends Controller
 {
     protected $viewFileName = "scoreboard"; //this will be the View that gets the data...
     protected $loginRequired = true;
@@ -11,10 +11,10 @@ class ScoreController extends Controller
         $this->view->title = 'scoreboard';
         $this->view->username = $this->user->username;
 
-        //$this->checkForSaveScorePost();
-        $this->view->userscores = GameModel::getScoreForOneUserById($this->user->id);
+        $this->checkForSaveScorePost();
+        $this->view->userscores = ScoreboardModel::getScoreForOneUserById($this->user->id);
 
-        $this->view->scores = GameModel::getTotalScores();
+        $this->view->scores = ScoreboardModel::getTotalScores();
     }
 
     private function checkForSaveScorePost()
@@ -23,10 +23,9 @@ class ScoreController extends Controller
         {
             $score = $_POST['score'];
             $userid = $this->user->id;
-            $tmsp = $_POST['tmsp'];
 
 
-            GameModel::createAndSaveScore($userid, $score, $tmsp);
+            ScoreboardModel::createAndSaveScore($userid, $score);
 
 
             $jsonResponse = new JSON();

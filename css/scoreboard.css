@@ -1,7 +1,11 @@
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
 
 .score_main {
     background-image: url("../images/background.jpg");
-    margin-top: -20px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -19,7 +23,7 @@
     text-align: center;
     font-family: "Comic Sans MS";
     padding: 60px;
-    height: 900px;
+    height: 80%;
     color: white;
 
 }
@@ -72,6 +76,9 @@ td {
 }
 
 .footer{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
     background-image: url("../images/erde.jpg");
     background-repeat: no-repeat;
     height: 60px;

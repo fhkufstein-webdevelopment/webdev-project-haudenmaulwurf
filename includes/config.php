@@ -6,4 +6,4 @@ define('LOGIN_URL', 'login');
 define('LOGOUT_URL', 'logout');
 define('INDEX_URL', 'index');
 define('SCOREBOARD_URL', 'scoreboard');
-
+define('HOME_URL', 'home');

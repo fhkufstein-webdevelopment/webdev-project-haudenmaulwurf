@@ -15,11 +15,18 @@ $route['/logout.html'] = array('controller' => 'LogoutController', 'uniqueName' 
 
 $route['/adresse'] = array('controller' => 'AddressDetailController', 'uniqueName' => 'addressdetail');
 
-$route['/scoreboard'] = array('controller' => 'GameController', 'uniqueName' => 'scoreboard');
-$route['/scoreboard.html'] = array('controller' => 'GameController', 'uniqueName' => 'scoreboard');
-$route['/scoreboard.php'] = array('controller' => 'GameController', 'uniqueName' => 'scoreboard');
+$route['/scoreboard'] = array('controller' => 'ScoreController', 'uniqueName' => 'scoreboard');
+$route['/scoreboard.html'] = array('controller' => 'ScoreController', 'uniqueName' => 'scoreboard');
+$route['/scoreboard.php'] = array('controller' => 'ScoreController', 'uniqueName' => 'scoreboard');
 
 $route['/home'] = array('controller' => 'HomeController', 'uniqueName' => 'home');
 $route['/home.html'] = array('controller' => 'HomeController', 'uniqueName' => 'home');
 $route['/home.php'] = array('controller' => 'HomeController', 'uniqueName' => 'home');
 
+$route['/game'] = array('controller' => 'GameController', 'uniqueName' => 'game');
+$route['/game.html'] = array('controller' => 'GameController', 'uniqueName' => 'game');
+$route['/game.php'] = array('controller' => 'GameController', 'uniqueName' => 'game');
+
+$route['/rules'] = array('controller' => 'RulesController', 'uniqueName' => 'rules');
+$route['/rules.html'] = array('controller' => 'RulesController', 'uniqueName' => 'rules');
+$route['/rules.php'] = array('controller' => 'RulesController', 'uniqueName' => 'rules');

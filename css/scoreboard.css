@@ -19,14 +19,15 @@
     text-align: center;
     font-family: "Comic Sans MS";
     padding: 60px;
-    color: white;
     height: 900px;
+    color: white;
 
 }
 
 table {
     width: 355px;
     font-size: 20px;
+
 }
 
 h1 {
@@ -94,4 +95,8 @@ h10{
     color: #CD853F;
 }
 
+.back_home {
+    color: black;
+    background-color: #CD853F;
+}
 

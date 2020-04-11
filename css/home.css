@@ -1,12 +1,14 @@
-/* Mein Vorschlag zum Stylen der HomeSite, muss nicht übernommen werden */
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
 
 .home_main {
     background-image: url("../images/background.jpg");
-    margin-top: -20px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 100vw;
     height: 100vh;
 }
 
@@ -21,8 +23,7 @@
     font-family: "Comic Sans MS";
     padding: 60px;
     color: white;
-    height: 900px;
-
+    height: 80%;
 }
 
 
@@ -35,6 +36,9 @@ h1 {
 }
 
 .footer{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
     background-image: url("../images/erde.jpg");
     background-repeat: no-repeat;
     height: 60px;
@@ -52,8 +56,6 @@ h10{
 .buttons {
     color: black;
     font-size: 25px;
-    width: 700px;
-    margin: 0 auto;
     border-color: white;
 }
 
@@ -61,7 +63,7 @@ h10{
 #start_game{
     width:200px;
     height: 100px;
-    margin-right: 35px;
+
 }
 
 #view_rules{
@@ -72,7 +74,7 @@ h10{
 #view_score{
     width:200px;
     height: 100px;
-    margin-left: 35px;
+
 }
 
 #start_game:hover{
@@ -87,3 +89,5 @@ h10{
     background-color: #CD853F;
     border-color: #CD853F;
 }
+
+

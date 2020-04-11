@@ -49,6 +49,7 @@ echo $this->header;
 <?php endif; ?>
 
 </div>
+    <button type="submit" id="back_home" onclick="window.open('./home','_self')" >Home</button>
 </div>
 </div>
 <?php

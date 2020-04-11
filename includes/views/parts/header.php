@@ -13,12 +13,15 @@
 		<link href="css/toastr.min.css" rel="stylesheet">
     <?php elseif($this->current == "scoreboard"): ?>
         <link href="css/scoreboard.css" rel="stylesheet">
-    <?php elseif($this->current == "home"): ?>          <!-- Mein Stylesheet zum Vorschlag meiner HomeSite, muss nicht übernommen werden! -->
+    <?php elseif($this->current == "home"): ?>
         <link href="css/home.css" rel="stylesheet">
+    <?php elseif($this->current == "game"): ?>
+        <link href="css/game.css" rel="stylesheet">
     <?php else: ?>
         <link href="css/main.css" rel="stylesheet">
     <?php endif; ?>
-		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 
 	<?php if($this->current == "index"): ?>
@@ -50,7 +53,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a href="/" class="navbar-brand active">Hau den Maulwurf</a>
+						<a href="/webdev-project-haudenmaulwurf/home" class="navbar-brand active">Hau den Maulwurf</a>
 					</div>
 
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

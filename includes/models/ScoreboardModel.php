@@ -1,16 +1,15 @@
 <?php
-class GameModel
+class ScoreboardModel
 {
-    public static function createAndSaveScore($userid, $score, $tmsp)
+    public static function createAndSaveScore($userid, $score)
     {
         $db = new Database();   //neue Datenbankverbindung
 
         //prevent SQL Injection:
         $userid = $db->escapeString($userid);
         $score = $db->escapeString($score);
-        $tmsp = $db->escapeString($tmsp);
 
-        $sql = "INSERT INTO game(`points`, `tmsp`, `userid`) VALUES('".$score."','".$tmsp."','".$userid."')";
+        $sql = "INSERT INTO score(`points`, `user_id`) VALUES('".$score."','".$userid."')";
         $db->query($sql);
     }
 

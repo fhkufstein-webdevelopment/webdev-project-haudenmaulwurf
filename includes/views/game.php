@@ -1,0 +1,27 @@
+<?php
+
+echo $this->header;
+
+?>
+
+<div id="additionalItems">
+    <div id="pointsCounter">Punkte:</div>
+    <div id="timer">Zeit</div>
+</div>
+<div id="game" class="noshow"></div>
+
+<div id="buttons">
+    <button class="easyButton difficultyButton" value="1">Easy</button>
+    <button class="mediumButton difficultyButton" value="2">Medium</button>
+    <button class="hardButton difficultyButton" value="3">Hard</button>
+    <button class="impossibleButton difficultyButton" value="999">Impossible</button>
+</div>
+<div id="endArea">
+    <button id="endButton">Zeige Highscores</button>
+</div>
+<script type="text/javascript" src="js/game.js"></script>
+<?php
+
+echo $this->footer;
+
+?>

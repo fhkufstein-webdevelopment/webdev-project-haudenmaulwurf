@@ -24,7 +24,7 @@ class Highscore extends RESTClass
 
 			if(isset($data['id']))
 			{
-				$dataForView = GameModel::getScoreForOneUserById($data['user_id']);
+				$dataForView = ScoreboardModel::getScoreForOneUserById($data['user_id']);
 				$user = new User();
 
 				if($dataForView->userId = $user->id)
@@ -80,7 +80,7 @@ class Highscore extends RESTClass
 		{
 			$data['userId'] = $user->id;
 
-			GameModel::createAndSaveScore($data);
+			ScoreboardModel::createAndSaveScore($data);
 
 			$jsonResponse = new JSON();
 			$jsonResponse->result = true;
@@ -116,7 +116,7 @@ class Highscore extends RESTClass
 
 		if(!$error)
 		{
-			$scoreObj = GameModel::createAndSaveScore($data['id']);
+			$scoreObj = ScoreboardModel::createAndSaveScore($data['id']);
 
 			if($scoreObj->userId != $user->id)
 			{
@@ -127,7 +127,7 @@ class Highscore extends RESTClass
 			}
 			else
 			{
-				GameModel::createAndSaveScore($data);
+				ScoreboardModel::createAndSaveScore($data);
 
 				$jsonResponse = new JSON();
 				$jsonResponse->result = true;
@@ -158,7 +158,7 @@ class Highscore extends RESTClass
 		}
 		else
 		{
-			$scoreObj = GameModel::getScoreForOneUserById($data['user_id']);
+			$scoreObj = ScoreboardModel::getScoreForOneUserById($data['user_id']);
 
 			if($scoreObj->userId != $user->id)
 			{
@@ -169,7 +169,7 @@ class Highscore extends RESTClass
 			}
 			else
 			{
-				GameModel::deleteScore($scoreObj->id);
+				ScoreboardModel::deleteScore($scoreObj->id);
 
 				$jsonResponse = new JSON();
 				$jsonResponse->result = true;

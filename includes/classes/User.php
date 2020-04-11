@@ -83,8 +83,8 @@ class User extends Database
 		exit();
 	}
 
-	public function redirectToGame(){
-        header('Location: '.SCOREBOARD_URL);
+	public function redirectToHome(){
+        header('Location: '.HOME_URL);
         header('Status: 303');
         exit();
 

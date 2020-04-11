@@ -1,0 +1,77 @@
+body{
+    background-image: url("image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h1{
+    color: darkgrey;
+}
+#main{
+    background-image: url("erde2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Comic Sans MS";
+    color: darkgrey;
+}
+#main p{
+    font-size: 120%;
+    font-weight: bold;
+    text-align: center;
+}
+#main button{
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    font-size: 150%;
+    text-align: center;
+    display: inline-block;
+    color: lightgray;
+    border: none;
+    border-radius: 20%;
+    background-color: dimgray;
+}
+button:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7), 0 6px 20px 0 rgba(0,0,0,0.4);
+}
+.row {
+    display: inline-block;
+    text-align: center;
+}
+p a{
+    text-decoration: none;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    font-size: 150%;
+    text-align: center;
+    display: inline-block;
+    color: lightgray;
+    border: none;
+    border-radius: 20%;
+    background-color: dimgray;
+}
+p a:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7), 0 6px 20px 0 rgba(0,0,0,0.4);
+}
+.btn-default{
+    float: right;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+.form-control{
+    font-family: "Comic Sans MS";
+    border: none;
+    border-radius: 12px;
+}
+::placeholder{
+    font-family: "Comic Sans MS";
+    color: dimgray;
+}
+.close{
+    text-align: center;
+    display: inline-block;
+    border: none;
+    border-radius: 20%;
+    background-color: dimgray;
+}
+.close:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7), 0 6px 20px 0 rgba(0,0,0,0.4);
+}

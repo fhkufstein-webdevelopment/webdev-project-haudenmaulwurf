@@ -1,0 +1,34 @@
+body{
+    background-image: url("image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+fieldset{
+    border: none;
+    border-radius: 12px;
+    background-image: url("erde2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 10%;
+}
+fieldset ol{
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    font-size: 120%;
+    color: burlywood;
+}
+fieldset p{
+    font-size: 120%;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    color: #CD853F;
+    text-align: center;
+}
+h1{
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    font-size: 220%;
+    color: white;
+    text-align: center;
+}
+

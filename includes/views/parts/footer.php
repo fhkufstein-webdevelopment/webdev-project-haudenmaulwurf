@@ -1,5 +1,5 @@
 <div class ="footer"><br>
-    <h10>Ascher Sabine, Exenberger Lea, Klammsteiner Mirjam</h10>
+    <p>Ascher Sabine, Exenberger Lea, Klammsteiner Mirjam</p>
 </div>
 </body>
 </html>

@@ -6,17 +6,33 @@ const settings = {
     counter: 0,
 };
 
+let myMusic;
+myMusic = new sound("images/molegamemusic.mp3", "backgroundMusic");
+
+
 $(document).ready(function () {
     // Wenn Button mit Schwierigkeit gedrückt wird, dann wird das Spiel gestartet
     $(".difficultyButton").click(function () {
         let buttonDiv = document.getElementById("buttons");
+        let difficultyButtons = $(".difficultyButton");
         settings.difficulty = parseInt($(this).val(), 10);
-        for (let i = 0; i < $("button").length; i++) {
-            $("button")[i].style.display = "none";
+        for (let i = 0; i < difficultyButtons.length; i++) {
+            difficultyButtons[i].style.display = "none";
         }
         init();
 
         buttonDiv.style.display = "none";
+
+        //Music
+        console.log($("#backgroundMusic"));
+        let audioMusicTHing = document.getElementById("backgroundMusic");
+        console.log(audioMusicTHing);
+        myMusic.play();
+        $("#backgroundMusic")[0].volume = 1.0; // ![0]
+        console.log($("#backgroundMusic"));
+
+        // damit man es auf den ersten Press gleich stoppen kann
+        musicMuteCounter = 1;
     });
 });
 
@@ -91,7 +107,7 @@ function init() {
                 // countdown stoppen und spawnen von Maulwürfen stoppen
                 clearInterval(timeID);
                 clearInterval(spawnInterval);
-
+                myMusic.stop();
                 for (let i = 0; i < settings.moles; i++) {
                     moleImage.classList.remove("alive");
                 }
@@ -177,4 +193,37 @@ function colorSetter(moleImage) {
         }
     }
 }
+
+// Added Music: https://www.w3schools.com/graphics/game_sound.asp
+// https://opengameart.org/content/caketown-cuteplayful
+function sound(src, id) {
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    this.sound.volume = 0.3;
+    this.sound.id = id;
+    document.body.appendChild(this.sound);
+    this.play = function(){
+        this.sound.play();
+    }
+
+    this.stop = function(){
+        this.sound.pause();
+    }
+}
+
+let musicMuteCounter = 0;
+$(".muteButton").click(function () {
+    if (musicMuteCounter % 2 == 1) {
+        myMusic.stop();
+        console.log("stopping");
+    } else {
+        myMusic.play();
+        console.log("playing");
+    }
+    musicMuteCounter++;
+});
+
 

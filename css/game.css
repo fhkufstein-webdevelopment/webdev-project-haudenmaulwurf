@@ -13,6 +13,8 @@ body {
     background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: "Comic Sans MS";
+
 }
 
 /* make screen non selectable */
@@ -126,6 +128,26 @@ img {
 
 }
 
+.audioControllers {
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    right: calc(20vw - 300px);
+    top: 44vh;
+    border: 2px solid black;
+    border-radius: 25px;
+    text-align: center;
+
+}
+
+.muteButton {
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    font-size: 15px;
+    display: block;
+}
+
 #additionalItems {
     font-size: 30px;
     font-weight: bold;
@@ -133,7 +155,6 @@ img {
     vertical-align: middle;
     line-height: 100px;
     font-family: "Comic Sans MS";
-
 }
 
 
@@ -160,7 +181,7 @@ button:hover {
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    top: 30%;
+    top: 20%;
     z-index: 10;
     font-family: "Comic Sans MS";
 
@@ -180,18 +201,4 @@ button:hover {
     height: 100px;
     border: 1px solid black;
     font-size: 25px;
-
-}
-
-.footer{
-    padding-left: 10px;
-    color: white;
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    background-image: url("../images/erde.jpg");
-    background-repeat: no-repeat;
-    height: 60px;
-    background-size: cover;
-    background-position: center;
 }

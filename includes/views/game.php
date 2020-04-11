@@ -19,7 +19,12 @@ echo $this->header;
 <div id="endArea">
     <button id="endButton">Zeige Highscores</button>
 </div>
+<div class="audioControllers">
+    <button class="muteButton">Toggle Sound</button>
+</div>
+
 <script type="text/javascript" src="js/game.js"></script>
+
 <?php
 
 echo $this->footer;

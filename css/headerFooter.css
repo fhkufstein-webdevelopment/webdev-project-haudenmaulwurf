@@ -1,0 +1,20 @@
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.footer{
+    position: absolute;
+    color: white;
+    bottom: 0px;
+    width: 100%;
+    background-image: url("../images/footerDirt.jpg");
+    background-repeat: no-repeat;
+    height: 60px;
+    background-size: cover;
+    background-position: center;
+    padding-left: 20px;
+    font-family: "Comic Sans MS";
+    font-size: 15px;
+}

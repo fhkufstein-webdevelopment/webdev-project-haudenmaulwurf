@@ -1,12 +1,4 @@
 
-header {
-    position: absolute;
-    top: 0;
-    width: 100%;
-
-}
-
-
 .main{
     background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
@@ -17,13 +9,12 @@ header {
 
 }
 
-.inner{
+.innerBorder {
     background-image: url("../images/erde.png");
     background-repeat: no-repeat;
     background-size: 100%;
     width: 990px;
     margin: 0 auto;
-
 
 }
 
@@ -57,18 +48,6 @@ h1{
     padding-top: 80px;
     text-transform: uppercase;
     padding-bottom: 0;
-}
-
-.footer{
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    background-image: url("../images/erde.png");
-    background-repeat: no-repeat;
-    height: 60px;
-    background-size: cover;
-    background-position: center;
-    color: white;
 }
 
 #back_home {

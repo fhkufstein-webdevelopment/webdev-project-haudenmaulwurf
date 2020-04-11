@@ -6,7 +6,7 @@ echo $this->header;
 
 
 <div class="main"><br><br><br>
-<div class="inner">
+<div class="innerBorder">
 
 <h1>Spielregeln</h1>
     <button type="submit" id="back_home" onclick="window.open('./home','_self')" >Home</button>

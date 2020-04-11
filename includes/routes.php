@@ -15,6 +15,7 @@ $route['/anmelden'] = array('controller' => 'LoginController', 'uniqueName' => '
 
 $route['/logout'] = array('controller' => 'LogoutController', 'uniqueName' => 'logout');
 $route['/logout.html'] = array('controller' => 'LogoutController', 'uniqueName' => 'logout');
+$route['/abmelden'] = array('controller' => 'LogoutController', 'uniqueName' => 'logout');
 
 $route['/scoreboard'] = array('controller' => 'ScoreboardController', 'uniqueName' => 'scoreboard');
 $route['/scoreboard.html'] = array('controller' => 'ScoreboardController', 'uniqueName' => 'scoreboard');

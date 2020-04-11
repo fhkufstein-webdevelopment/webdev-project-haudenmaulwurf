@@ -28,7 +28,7 @@ $(document).ready(function () {
         let audioMusicTHing = document.getElementById("backgroundMusic");
         console.log(audioMusicTHing);
         myMusic.play();
-        $("#backgroundMusic")[0].volume = 1.0; // ![0]
+        $("#backgroundMusic")[0].volume = 0.3; // ![0]
         console.log($("#backgroundMusic"));
 
         // damit man es auf den ersten Press gleich stoppen kann

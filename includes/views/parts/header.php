@@ -11,6 +11,7 @@
 
 	<?php if($this->current == "login"): ?>
 		<link href="css/login.css" rel="stylesheet">
+        <link href="css/registrierung.css" rel="stylesheet">
     <?php elseif($this->current == "scoreboard"): ?>
         <link href="css/scoreboard.css" rel="stylesheet">
     <?php elseif($this->current == "home"): ?>

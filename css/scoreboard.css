@@ -16,7 +16,7 @@ header {
 
 .score_inner {
     background-size: 100%;
-    background-image: url("../images/erde2.png");
+    background-image: url("../images/erde.png");
     background-repeat: no-repeat;
     width: 990px;
     margin: 0 auto;
@@ -24,14 +24,12 @@ header {
     font-family: "Comic Sans MS";
     padding: 60px;
     height: 80%;
-    color: white;
-
 }
 
 table {
     width: 355px;
     font-size: 20px;
-
+    color: white;
 }
 
 h1 {
@@ -39,6 +37,7 @@ h1 {
     font-size: 55px;
     text-transform: uppercase;
     font-weight: bold;
+    color: white;
 }
 
 
@@ -46,44 +45,51 @@ th{
     text-align: center;
     padding-bottom:20px;
     font-size: 30px;
+    color: white;
 }
 
 td {
     font-size: 25px;
     padding-left: 20px;
     text-align: left;
+    color: white;
 }
 
 .tabelle1 {
     float: left;
+    color: white;
 
 }
 
 .tabelle2{
     float: right;
+    color: white;
 
 }
 
 .tabelle1_punkte{
     text-align: right;
     padding-right: 20px;
+    color: white;
 }
 
 
 .tabelle2_punkte{
     text-align: right;
     padding-right: 20px;
+    color: white;
 }
 
 .footer{
     position: absolute;
     bottom: 0px;
     width: 100%;
-    background-image: url("../images/erde.jpg");
+    background-image: url("../images/erde.png");
     background-repeat: no-repeat;
     height: 60px;
     background-size: cover;
     background-position: center;
+    color: white;
 }
 
 h10{
@@ -91,19 +97,27 @@ h10{
     color: white;
     font-size: 15px;
     padding-left: 15px;
-
+    color: white;
 }
 
-.td_highscores:hover{
+h3{
+    color: white;
+}
+
+.tr_highscores:hover{
     color: #CD853F;
 }
 
-.td_userscores:hover{
+.tr_userscores:hover{
     color: #CD853F;
 }
 
-.back_home {
-    color: black;
+#back_home {
+    color: white;
     background-color: #CD853F;
+    border-color: #CD853F;
+    position: absolute;
+    left: 77%;
+    top: 22%;
 }
 

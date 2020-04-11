@@ -1,10 +1,10 @@
 body{
-    background-image: url("image.jpg");
+    background-image: url("../images/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 #registerModal{
-    background-image: url("erde2.png");
+    background-image: url("../images/erde.png");
     background-repeat: no-repeat;
     background-size: cover;
     position: center;

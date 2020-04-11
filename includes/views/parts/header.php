@@ -10,13 +10,15 @@
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 
 	<?php if($this->current == "login"): ?>
-		<link href="css/toastr.min.css" rel="stylesheet">
+		<link href="css/login.css" rel="stylesheet">
     <?php elseif($this->current == "scoreboard"): ?>
         <link href="css/scoreboard.css" rel="stylesheet">
     <?php elseif($this->current == "home"): ?>
         <link href="css/home.css" rel="stylesheet">
     <?php elseif($this->current == "game"): ?>
         <link href="css/game.css" rel="stylesheet">
+    <?php elseif($this->current == "rules"): ?>
+        <link href="css/rules.css" rel="stylesheet">
     <?php else: ?>
         <link href="css/main.css" rel="stylesheet">
     <?php endif; ?>

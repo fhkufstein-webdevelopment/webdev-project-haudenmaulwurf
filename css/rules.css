@@ -1,0 +1,89 @@
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+}
+
+
+.main{
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.inner{
+    background-image: url("../images/erde.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 990px;
+    margin: 0 auto;
+
+
+}
+
+
+fieldset{
+    font-size: 16px;
+
+}
+
+fieldset ol{
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    font-size: 120%;
+    color: burlywood;
+    margin-left: 30px;
+
+}
+fieldset p{
+    font-size: 170%;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    color: #CD853F;
+    text-align: center;
+}
+h1{
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    font-size: 55px;
+    color: white;
+    text-align: center;
+    padding-top: 80px;
+    text-transform: uppercase;
+    padding-bottom: 0;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background-image: url("../images/erde.png");
+    background-repeat: no-repeat;
+    height: 60px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+#back_home {
+    color: white;
+    background-color: #CD853F;
+    border-color: #CD853F;
+    position: absolute;
+    left: 77%;
+    top: 22%;
+}
+
+h10{
+    font-family: "Comic Sans MS";
+    color: white;
+    font-size: 15px;
+    padding-left: 15px;
+    color: white;
+}

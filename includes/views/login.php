@@ -1,8 +1,9 @@
 <?php
-include_once ("Login.css");
+
 echo $this->header;
+
 ?>
-<link href="Login.css" rel="stylesheet"/>
+<link href="../../css/Login.css" rel="stylesheet"/>
 <link href="footer.html"/>
 <div id="main">
     <div class="row">

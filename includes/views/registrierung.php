@@ -2,7 +2,7 @@
 
 echo $this->header;
 ?>
-<link href="registrierung.css" rel="stylesheet"/>
+<link href="../../css/registrierung.css" rel="stylesheet"/>
 <div class="modal fade<?php if($registerError):?> in<?php endif; ?>" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">

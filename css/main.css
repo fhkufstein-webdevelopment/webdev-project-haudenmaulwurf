@@ -17,7 +17,7 @@ header {
 /* line 22, ../scss/main.scss */
 header .inner {
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
 }
 /* line 26, ../scss/main.scss */
 header .inner .logo {

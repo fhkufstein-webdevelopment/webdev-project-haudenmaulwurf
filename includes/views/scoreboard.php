@@ -19,7 +19,7 @@ echo $this->header;
 
             </tr>
             <?php foreach($this->userscores as $userscoreObj): ?>
-                <tr class="td_userscores">
+                <tr class="tr_userscores">
                     <td><?php echo $userscoreObj->tmsp; ?></td>
                     <td class="tabelle1_punkte"><?php echo $userscoreObj->points; ?></td>
                 </tr>
@@ -38,7 +38,7 @@ echo $this->header;
             <th colspan="2">Highscores global</th>
         </tr>
         <?php foreach($this->scores as $scoreObj): ?>
-            <tr class="td_highscores">
+            <tr class="tr_highscores">
                 <td><?php echo $scoreObj->name; ?></td>
                 <td class="tabelle2_punkte"><?php echo $scoreObj->points; ?></td>
             </tr>

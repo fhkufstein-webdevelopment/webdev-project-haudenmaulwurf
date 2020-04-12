@@ -9,7 +9,7 @@ echo $this->header;
 
 <h1>Scoreboard </h1>
     <p><h3>Hier siehst du deine besten Ergebnisse sowie die generellen Highscores</h3></p>
-
+    <div class="lastScore">
     <?php if($this->lastScore): ?>
     <h3>zuletzt:
         <?php foreach($this->lastScore as $scoreObj): ?>
@@ -20,7 +20,7 @@ echo $this->header;
     <?php else: ?>
         <p>Es sind noch keine HighScore Einträge vorhanden!</p>
     <?php endif; ?>
-
+</div>
 
 
 

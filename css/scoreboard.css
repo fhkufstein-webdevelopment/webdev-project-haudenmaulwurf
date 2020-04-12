@@ -96,5 +96,6 @@ h10{
     top: 22%;
 }
 
-
-
+.lastScore:hover{
+    color: #CD853F;
+}

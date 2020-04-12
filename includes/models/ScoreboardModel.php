@@ -69,4 +69,28 @@ class ScoreboardModel
         $sql = "DELETE FROM score WHERE id=".intval($id);
         $db->query($sql);
     }
+
+    public static function getLastScore($userid){
+
+        $db = new Database();
+        $id = intval($userid);
+        $sql = "SELECT points FROM score WHERE user_id = $id order by tmsp desc limit 1";
+
+        $result = $db->query($sql);
+
+        if($db->numRows($result) > 0) {     //Wenn in der Abfrage die Anzahl der Ausgaben größer ist als 0, dann...
+
+            $scoreArray = array();
+
+            while($row = $db->fetchObject($result))  //solange ein Eintrag aus der Variable result als Arrayinhalt in die Variable row geschrieben wird führe die Schleife aus
+            {
+                $scoreArray[] = $row;
+            }
+
+            return $scoreArray;
+        }
+        else {
+            return null;
+        }
+    }
 }

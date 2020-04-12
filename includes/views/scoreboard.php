@@ -9,7 +9,20 @@ echo $this->header;
 
 <h1>Scoreboard </h1>
     <p><h3>Hier siehst du deine besten Ergebnisse sowie die generellen Highscores</h3></p>
-    <br><br>
+
+    <?php if($this->lastScore): ?>
+    <h3>zuletzt:
+        <?php foreach($this->lastScore as $scoreObj): ?>
+        <?php echo $scoreObj -> points; ?>
+         Punkte
+    </h3>
+        <?php endforeach; ?>
+    <?php else: ?>
+        <p>Es sind noch keine HighScore Einträge vorhanden!</p>
+    <?php endif; ?>
+
+
+
 
 <div class = "tabelle1">
     <?php if($this->userscores): ?>
@@ -49,7 +62,7 @@ echo $this->header;
 <?php endif; ?>
 
 </div>
-    <button type="submit" id="back_home" onclick="window.open('./home','_self')" >Home</button>
+    <button type="submit" class="back_home" onclick="window.open('./home','_self')" >Home</button>
 </div>
 </div>
 <?php

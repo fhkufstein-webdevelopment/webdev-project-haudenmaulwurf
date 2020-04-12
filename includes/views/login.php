@@ -4,11 +4,12 @@ echo $this->header;
 
 ?>
     <div id="main">
-        <div class="row">
-            <h1 class="col-xs-12">Login</h1>
+        <div class="row"><br><br>
+            <h1 class="col-xs-12">Login</h1><br>
             <p class="col-xs-12">
-                Melden Sie sich bitte an um den Dienst nutzen zu können. Sie besitzen noch keinen Account? Dann können Sie sich <a href="login#registrierung" class="registerOverlay">hier registrieren</a>.
+                Melden Sie sich bitte an um den Dienst nutzen zu können. Sie besitzen noch keinen Account? Dann können Sie sich <a href="login#registrierung" class="registerOverlay">hier registrieren</a><br><br>
             </p>
+
 
             <form method="post" action="login" class="form-horizontal col-xs-12">
                 <?php if($this->errorPasswd == true): ?>
@@ -17,11 +18,11 @@ echo $this->header;
                             <span aria-hidden="true">&times;</span>
                         </button>
                         <h4>Benutzername und/oder Passwort sind falsch</h4>
-                        <p>Prüfen Sie bitte ob Sie sich nicht vertippt haben und versuchen Sie es erneut!</p>
+                        <p>Prüfen Sie bitte, ob Sie sich nicht vertippt haben und versuchen Sie es erneut!</p>
                     </div>
                 <?php endif; ?>
                 <div class="form-group">
-                    <label for="username" class="col-xs-12 col-md-2">Benutzername</label>
+                    <label for="username" class="col-xs-12 col-md-2"> Benutzername</label>
                     <div class="col-xs-12 col-md-10">
                         <input type="text" name="username" id="username" class="text form-control" value="" placeholder="Benutzername">
                     </div>

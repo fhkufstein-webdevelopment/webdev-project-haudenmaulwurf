@@ -15,6 +15,7 @@ class ScoreboardController extends Controller
         $this->view->userscores = ScoreboardModel::getScoreForOneUserById($this->user->id);
 
         $this->view->scores = ScoreboardModel::getTotalScores();
+        $this->view->lastScore = ScoreboardModel::getLastScore($this->user->id);
     }
 
     private function checkForSaveScorePost()

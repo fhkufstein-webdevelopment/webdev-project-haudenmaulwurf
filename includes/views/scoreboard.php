@@ -32,7 +32,7 @@ echo $this->header;
 
             </tr>
             <?php foreach($this->userscores as $userscoreObj): ?>
-                <tr class="tr_userscores">
+                <tr <?php if ($this->userid == $userscoreObj ->userid): ?> class="highlight"<?php endif; ?> class="tr_userscores">
                     <td><?php echo $userscoreObj->tmsp; ?></td>
                     <td class="tabelle1_punkte"><?php echo $userscoreObj->points; ?></td>
                 </tr>
@@ -43,6 +43,8 @@ echo $this->header;
     <?php endif; ?>
     <br>
 </div>
+
+
     <div class ="tabelle2">
 <?php if($this->scores): ?>
 
@@ -51,7 +53,7 @@ echo $this->header;
             <th colspan="2">Highscores global</th>
         </tr>
         <?php foreach($this->scores as $scoreObj): ?>
-            <tr class="tr_highscores">
+            <tr <?php if ($this->userid == $scoreObj ->userid): ?> class="highlight"<?php endif; ?> class="tr_highscores">
                 <td><?php echo $scoreObj->name; ?></td>
                 <td class="tabelle2_punkte"><?php echo $scoreObj->points; ?></td>
             </tr>

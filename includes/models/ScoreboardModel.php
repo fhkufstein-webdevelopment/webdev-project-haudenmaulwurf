@@ -42,7 +42,7 @@ class ScoreboardModel
     public static function getTotalScores(){
         $db = new Database();
 
-        $sql = "SELECT score.points, `user`.name FROM score LEFT JOIN `user` on score.user_id = user.id ORDER BY points DESC LIMIT 5";
+        $sql = "SELECT `user`.id, score.points, `user`.name FROM score LEFT JOIN `user` on score.user_id = user.id ORDER BY points DESC LIMIT 5";
         $result = $db->query($sql);
 
         if($db->numRows($result) > 0) {     //Wenn in der Abfrage die Anzahl der Ausgaben größer ist als 0, dann...

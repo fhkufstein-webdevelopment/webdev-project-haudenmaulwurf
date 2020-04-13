@@ -10,6 +10,7 @@ class ScoreboardController extends Controller
     {
         $this->view->title = 'scoreboard';
         $this->view->username = $this->user->username;
+        $this->view->userid = $this->user->id;
 
         $this->checkForSaveScorePost();
         $this->view->userscores = ScoreboardModel::getScoreForOneUserById($this->user->id);

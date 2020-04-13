@@ -51,12 +51,10 @@ td {
 
 .tabelle1 {
     float: left;
-
 }
 
 .tabelle2{
     float: right;
-
 }
 
 .tabelle1_punkte{
@@ -98,5 +96,9 @@ h10{
 
 .lastScore:hover{
     color: #CD853F;
+}
+
+#highlight{
+    background-color: saddlebrown;
 }
 

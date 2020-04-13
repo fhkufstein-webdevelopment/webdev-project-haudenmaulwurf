@@ -1,0 +1,58 @@
+
+.error_main {
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.error_inner {
+    background-size: 100%;
+    background-image: url("../images/erde.png");
+    background-repeat: no-repeat;
+    width: 990px;
+    margin: 0 auto;
+    padding: 60px;
+    height: 80%;
+
+
+}
+
+
+h1 {
+    padding-bottom: 0px;
+    font-size: 55px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Comic Sans MS";
+    color: white;
+}
+
+h3 {
+    color: white;
+    font-family: "Comic Sans MS";
+    text-align: center;
+}
+
+h4{
+    font-family: "Comic Sans MS";
+    color: white;
+}
+
+.liste{
+    width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+li{
+    margin-bottom: 15px;
+}
+
+li:hover {
+    color: #CD853F;
+}

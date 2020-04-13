@@ -22,6 +22,8 @@
         <link href="css/rules.css" rel="stylesheet">
     <?php elseif($this->current == "logout"): ?>
         <link href="css/logout.css" rel="stylesheet">
+    <?php elseif($this->current == "404"): ?>
+        <link href="css/404.css" rel="stylesheet">
     <?php else: ?>
         <link href="css/main.css" rel="stylesheet">
     <?php endif; ?>

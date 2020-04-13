@@ -28,3 +28,7 @@ $route['/game.php'] = array('controller' => 'GameController', 'uniqueName' => 'g
 $route['/rules'] = array('controller' => 'RulesController', 'uniqueName' => 'rules');
 $route['/rules.html'] = array('controller' => 'RulesController', 'uniqueName' => 'rules');
 $route['/rules.php'] = array('controller' => 'RulesController', 'uniqueName' => 'rules');
+
+$route['/404'] = array('controller' => 'FileNotFoundController', 'uniqueName' => '404');
+$route['/404.html'] = array('controller' => 'FileNotFoundController', 'uniqueName' => '404');
+$route['/404.php'] = array('controller' => 'FileNotFoundController', 'uniqueName' => '404');

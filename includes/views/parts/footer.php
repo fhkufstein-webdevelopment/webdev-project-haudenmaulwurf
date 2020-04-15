@@ -1,5 +1,5 @@
-<div class ="footer"><br>
+<footer>
     <p>Ascher Sabine, Exenberger Lea, Klammsteiner Mirjam</p>
-</div>
+</footer>
 </body>
 </html>

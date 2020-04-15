@@ -5,7 +5,7 @@ header {
     width: 100%;
 }
 
-.footer{
+footer {
     position: absolute;
     color: white;
     bottom: 0px;
@@ -16,6 +16,7 @@ header {
     background-size: cover;
     background-position: center;
     padding-left: 20px;
+    padding-top: 20px;
     font-family: "Comic Sans MS";
     font-size: 15px;
 }

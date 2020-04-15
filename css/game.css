@@ -84,6 +84,19 @@ img {
 
 }
 
+
+@media (max-width: 1224px) {
+    .dirt {
+        background-size: auto 75px;
+        background-repeat: no-repeat;
+    }
+
+    .mole {
+        height: 75px;
+    }
+}
+
+
 .alive {
     visibility: visible;
     position: relative;
@@ -98,7 +111,7 @@ img {
         bottom: 0%;
     }
     50% {
-        bottom: 43%;
+        bottom: 50%; /* also depending on height */
     }
     to {
         bottom: 0%;

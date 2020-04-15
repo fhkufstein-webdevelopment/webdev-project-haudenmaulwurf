@@ -20,7 +20,9 @@ echo $this->header;
     <button id="endButton">Zeige Highscores</button>
 </div>
 <div class="audioControllers">
-    <button class="muteButton">Toggle Sound</button>
+    <button class="muteButton"><img src="./images/unmutedButton.png" id="mute"></i></button>
+    <button class="volumeButton volumeDown">--</i></button>
+    <button class="volumeButton volumeUp">++</i></button>
 </div>
 
 <script type="text/javascript" src="js/game.js"></script>

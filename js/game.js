@@ -24,9 +24,6 @@ $(document).ready(function () {
         buttonDiv.style.display = "none";
 
         //Music
-        console.log($("#backgroundMusic"));
-        let audioMusicTHing = document.getElementById("backgroundMusic");
-        console.log(audioMusicTHing);
         myMusic.play();
         $("#backgroundMusic")[0].volume = 0.3; // ![0]
         console.log($("#backgroundMusic"));
@@ -204,6 +201,7 @@ function sound(src, id) {
     this.sound.style.display = "none";
     this.sound.volume = 0.3;
     this.sound.id = id;
+    this.sound.loop;
     document.body.appendChild(this.sound);
     this.play = function(){
         this.sound.play();
@@ -215,15 +213,34 @@ function sound(src, id) {
 }
 
 let musicMuteCounter = 0;
+let muteIcon = document.getElementById("mute");
 $(".muteButton").click(function () {
     if (musicMuteCounter % 2 == 1) {
         myMusic.stop();
-        console.log("stopping");
+        muteIcon.src = "images/muteButton.png"
     } else {
         myMusic.play();
-        console.log("playing");
+        muteIcon.src = "images/unmutedButton.png"
     }
     musicMuteCounter++;
 });
 
+$(".volumeButton").click(function () {
+    if(this.classList.contains("volumeUp")) {
+        volumeUp()
+    } else if(this.classList.contains("volumeDown")) {
+        volumeDown();
+    }
+});
 
+function volumeDown() {
+    if($("#backgroundMusic")[0].volume >= 0.1) {
+        $("#backgroundMusic")[0].volume -= 0.1;
+    }
+}
+
+function volumeUp() {
+    if($("#backgroundMusic")[0].volume <= 0.9) {
+        $("#backgroundMusic")[0].volume += 0.1;
+    }
+}

@@ -5,6 +5,15 @@ header {
     width: 100%;
 }
 
+header .myNavbar {
+    background-image: url("../images/sky.jpg");
+    background-color: #2aabd2;
+    border-color: #04D5FE;
+    background-blend-mode: screen;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
 footer {
     position: absolute;
     color: white;

@@ -6,6 +6,7 @@
     background-position: center;
     width: 100vw;
     height: 100vh;
+
 }
 
 
@@ -20,7 +21,6 @@
     padding: 60px;
     height: 80%;
     color: white;
-
 }
 
 table {
@@ -99,6 +99,10 @@ h10{
 }
 
 .needsHighlight {
-    color: red;
+    background-color: saddlebrown;
+
 }
 
+.needsHighlight:hover{
+    color: #CD853F;
+}

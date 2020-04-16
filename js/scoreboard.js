@@ -1,5 +1,7 @@
 $( document ).ready(function() {
-    let currentScore = $(".tr_lastscore")[0].classList.item(0);
+    let currentScore = $(".h3_lastscore")[0].classList.item(0);
+
+    console.log($(".tr_highscores"));
 
     for (let i = 0; i < $(".tr_highscores").length; i++) {
         let eachHighscore = $(".tr_highscores")[i];
@@ -8,6 +10,7 @@ $( document ).ready(function() {
         if (eachHighscoreNumber == currentScore) {
             eachHighscore.classList.add("needsHighlight");
         }
+        eachHighscore.classList.remove(eachHighscore.classList.item(0));
     }
 
     for (let i = 0; i < $(".tr_userscores").length; i++) {
@@ -17,6 +20,9 @@ $( document ).ready(function() {
         if (eachUserscoreNumber == currentScore) {
             eachUserscore.classList.add("needsHighlight");
         }
+        eachUserscore.classList.remove(eachUserscore.classList.item(0));
     }
+
+    $(".h3_lastscore")[0].classList.remove(currentScore);
 
 });

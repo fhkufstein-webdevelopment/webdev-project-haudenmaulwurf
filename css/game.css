@@ -184,7 +184,8 @@ img {
 }
 
 button:hover {
-    background-color: lightgray;
+    background-color: #CD853F;
+    border-color: #CD853F;
 }
 
 #buttons, #endArea {

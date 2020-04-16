@@ -12,7 +12,7 @@ echo $this->header;
     <div class="lastScore">
     <?php if($this->lastScore): ?>
     <?php foreach($this->lastScore as $scoreObj): ?>
-    <h3 <?php echo "class='".$scoreObj->id." tr_lastscore'" ?>>zuletzt:
+    <h3 <?php echo "class='".$scoreObj->id." h3_lastscore'" ?>>zuletzt:
         <?php echo $scoreObj -> points; ?>
          Punkte
     </h3>

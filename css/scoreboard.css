@@ -99,6 +99,9 @@ h10{
 }
 
 .needsHighlight {
-    color: red;
+    background-color: #CD853F;
 }
 
+.needsHighlight:hover {
+    color: saddlebrown;
+}

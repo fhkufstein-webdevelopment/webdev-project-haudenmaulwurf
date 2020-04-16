@@ -97,7 +97,7 @@ function init() {
         });
 
         // TIMER
-        let time = 10; // in Sekunden
+        let time = 30; // in Sekunden
         let timeID; // zum Stoppen, wenn Zeit abgelaufen
         function drawElapsedTime() {
             if (time < 0) {

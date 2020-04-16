@@ -21,8 +21,9 @@ echo $this->header;
     </div>
     <div class="audioControllers">
         <button class="muteButton"><img src="./images/unmutedButton.png" id="mute"></i></button>
-        <button class="volumeButton volumeDown">--</i></button>
-        <button class="volumeButton volumeUp">++</i></button>
+        <br>
+        <button class="volumeButton volumeDown"><b>--</b></i></button>
+        <button class="volumeButton volumeUp"><b>++</b></i></button>
     </div>
 </div>
 <script type="text/javascript" src="js/game.js"></script>

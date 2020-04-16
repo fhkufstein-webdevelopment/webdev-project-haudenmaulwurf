@@ -9,7 +9,6 @@
     overflow: auto;
 }
 
-
 /* make screen non selectable */
 ::selection {
     color: none;
@@ -41,13 +40,15 @@ img {
     background-color: #3b563f;
     border-radius: 25px;
 
-    cursor: url("../images/hammer.png"), auto;
+    /*cursor: url("../images/hammer.png"), auto;
+
+     */
 }
 
 #game.noshow div{display:none;}
 
 .grid-item {
-    padding: 20px;
+    padding: 35px;
 }
 
 .mole {
@@ -80,16 +81,7 @@ img {
 }
 
 
-@media (max-width: 1224px) {
-    .dirt {
-        background-size: auto 75px;
-        background-repeat: no-repeat;
-    }
 
-    .mole {
-        height: 75px;
-    }
-}
 
 
 .alive {
@@ -101,24 +93,13 @@ img {
     z-index: 1;
 }
 
-@keyframes moleRising {
-    from {
-        bottom: 0%;
-    }
-    50% {
-        bottom: 50%; /* also depending on height */
-    }
-    to {
-        bottom: 0%;
-        visibility: hidden;
-    }
-}
+
 
 #timer {
     position: absolute;
     height: 10vh;
     width: 10vw;
-    right: calc(20vw - 300px);
+    right: 2vw;
     border: 2px solid black;
     border-radius: 25px;
     top: 20vh;
@@ -128,7 +109,7 @@ img {
     position: absolute;
     height: 10vh;
     width: 10vw;
-    right: calc(20vw - 300px);
+    right: 2vw;
     top: 32vh;
     border: 2px solid black;
     border-radius: 25px;
@@ -136,12 +117,10 @@ img {
 
 .audioControllers {
     position: absolute;
-    height: 100px;
-    width: 200px;
-    right: calc(20vw - 300px);
+    height: 10vh;
+    width: 10vw;
+    right: 2vw;
     top: 44vh;
-    border: 2px solid black;
-    border-radius: 25px;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -199,7 +178,6 @@ button:hover {
     top: 20%;
     z-index: 10;
     font-family: "Comic Sans MS";
-
 }
 
 #endArea {
@@ -216,4 +194,54 @@ button:hover {
     height: 100px;
     border: 1px solid black;
     font-size: 25px;
+}
+
+@media (max-width: 1400px) {
+    .dirt {
+        background-size: auto 75px;
+        background-repeat: no-repeat;
+    }
+
+    .mole {
+        height: 75px;
+    }
+
+
+    #game {
+        height: 520px;
+        width: 800px;
+    }
+
+    #additionalItems {
+        font-size: 20px;
+    }
+
+    @keyframes moleRising {
+        from {
+            bottom: 0%;
+        }
+        50% {
+            bottom: 45%; /*todo: also depending on height */
+        }
+        to {
+            bottom: 0%;
+            visibility: hidden;
+        }
+    }
+
+}
+
+@media (min-width: 1401px) {
+    @keyframes moleRising {
+        from {
+            bottom: 0%;
+        }
+        50% {
+            bottom: 50%; /*todo: also depending on height */
+        }
+        to {
+            bottom: 0%;
+            visibility: hidden;
+        }
+    }
 }

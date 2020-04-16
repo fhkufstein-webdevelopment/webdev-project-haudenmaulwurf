@@ -98,7 +98,7 @@ h10{
     color: #CD853F;
 }
 
-#highlight{
-    background-color: saddlebrown;
+.needsHighlight {
+    color: red;
 }
 

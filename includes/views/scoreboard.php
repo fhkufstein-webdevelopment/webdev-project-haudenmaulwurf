@@ -11,8 +11,8 @@ echo $this->header;
     <p><h3>Hier siehst du deine besten Ergebnisse sowie die generellen Highscores</h3></p>
     <div class="lastScore">
     <?php if($this->lastScore): ?>
-    <h3>zuletzt:
-        <?php foreach($this->lastScore as $scoreObj): ?>
+    <?php foreach($this->lastScore as $scoreObj): ?>
+    <h3 <?php echo "class='".$scoreObj->id." tr_lastscore'" ?>>zuletzt:
         <?php echo $scoreObj -> points; ?>
          Punkte
     </h3>
@@ -32,7 +32,7 @@ echo $this->header;
 
             </tr>
             <?php foreach($this->userscores as $userscoreObj): ?>
-                <tr <?php if ($this->userid == $userscoreObj ->userid): ?> class="highlight"<?php endif; ?> class="tr_userscores">
+                <tr <?php echo "class='".$userscoreObj->id." tr_userscores'" ?>>
                     <td><?php echo $userscoreObj->tmsp; ?></td>
                     <td class="tabelle1_punkte"><?php echo $userscoreObj->points; ?></td>
                 </tr>
@@ -53,7 +53,7 @@ echo $this->header;
             <th colspan="2">Highscores global</th>
         </tr>
         <?php foreach($this->scores as $scoreObj): ?>
-            <tr <?php if ($this->userid == $scoreObj ->userid): ?> class="highlight"<?php endif; ?> class="tr_highscores">
+            <tr <?php echo "class='".$scoreObj->scoreID." tr_highscores'"?>>
                 <td><?php echo $scoreObj->name; ?></td>
                 <td class="tabelle2_punkte"><?php echo $scoreObj->points; ?></td>
             </tr>
@@ -72,6 +72,7 @@ echo $this->header;
 echo $this->footer;
 
 ?>
+<script type="text/javascript" src="js/scoreboard.js"></script>
 
 
 

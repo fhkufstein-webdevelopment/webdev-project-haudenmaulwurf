@@ -40,6 +40,8 @@ img {
     padding-top: 100px;
     background-color: #3b563f;
     border-radius: 25px;
+
+    cursor: url("../images/hammer.png"), auto;
 }
 
 #game.noshow div{display:none;}

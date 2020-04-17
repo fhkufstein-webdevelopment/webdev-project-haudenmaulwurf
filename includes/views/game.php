@@ -11,10 +11,10 @@ echo $this->header;
     <div id="game" class="noshow"></div>
 
     <div id="buttons">
-        <button class="easyButton difficultyButton" value="1">Easy</button>
-        <button class="mediumButton difficultyButton" value="2">Medium</button>
-        <button class="hardButton difficultyButton" value="3">Hard</button>
-        <button class="impossibleButton difficultyButton" value="999">Impossible</button>
+        <button class="easyButton difficultyButton" value="1">Leicht</button>
+        <button class="mediumButton difficultyButton" value="2">Mittel</button>
+        <button class="hardButton difficultyButton" value="3">Schwer</button>
+        <button class="impossibleButton difficultyButton" value="999">Unmöglich</button>
     </div>
     <div id="endArea">
         <button id="endButton">Zeige Highscores</button>

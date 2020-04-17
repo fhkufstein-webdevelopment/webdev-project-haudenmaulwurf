@@ -1,8 +1,6 @@
 $( document ).ready(function() {
     let currentScore = $(".h3_lastscore")[0].classList.item(0);
 
-    console.log($(".tr_highscores"));
-
     for (let i = 0; i < $(".tr_highscores").length; i++) {
         let eachHighscore = $(".tr_highscores")[i];
         let eachHighscoreNumber = $(".tr_highscores")[i].classList.item(0);

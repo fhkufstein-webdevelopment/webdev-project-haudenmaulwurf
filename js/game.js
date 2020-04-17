@@ -98,7 +98,7 @@ function init() {
                     settings.counter--;
                 }
                 // Updaten der neuen Punktanzahl
-                $(counterText).text("Points: " + settings.counter);
+                $(counterText).text("Punkte: " + settings.counter);
             }
         });
 

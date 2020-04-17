@@ -37,11 +37,10 @@ img {
     justify-items: center;
     border: solid 1px black;
     padding-top: 100px;
-    background-color: #3b563f;
+    background-color: #5e8c31;
     border-radius: 25px;
 
     cursor: url("../images/hammer.png"), auto;
-
 }
 
 #game.noshow div{display:none;}
@@ -78,10 +77,6 @@ img {
     -ms-user-select: none;
 
 }
-
-
-
-
 
 .alive {
     visibility: visible;
@@ -231,7 +226,7 @@ button:hover {
             bottom: 0%;
         }
         50% {
-            bottom: 45%; /*todo: also depending on height */
+            bottom: 45%;
         }
         to {
             bottom: 0%;
@@ -246,8 +241,8 @@ button:hover {
                 bottom: 0%;
             }
             50% {
-                bottom: 100%; /*todo: also depending on height */
-            }
+                bottom: 100%;
+    }
             to {
                 bottom: 0%;
                 visibility: hidden;

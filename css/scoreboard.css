@@ -6,6 +6,7 @@
     background-position: center;
     width: 100vw;
     height: 100vh;
+
 }
 
 
@@ -20,7 +21,6 @@
     padding: 60px;
     height: 80%;
     color: white;
-
 }
 
 table {
@@ -51,12 +51,10 @@ td {
 
 .tabelle1 {
     float: left;
-
 }
 
 .tabelle2{
     float: right;
-
 }
 
 .tabelle1_punkte{
@@ -79,25 +77,31 @@ h10{
 
 }
 
-.td_highscores:hover{
+.tr_highscores:hover{
     color: #CD853F;
 }
 
-.td_userscores:hover{
+.tr_userscores:hover{
     color: #CD853F;
 }
 
 .back_home {
-    color: black;
-    background-color: #CD853F;
-}
-
-#back_home {
     color: white;
     background-color: #CD853F;
     border-color: #CD853F;
     position: absolute;
-    left: 50%;
-    top: 30%;
+    left: 77%;
+    top: 22%;
 }
 
+.lastScore:hover{
+    color: #CD853F;
+}
+
+.needsHighlight {
+    background-color: #CD853F;
+}
+
+.needsHighlight:hover {
+    color: saddlebrown;
+}

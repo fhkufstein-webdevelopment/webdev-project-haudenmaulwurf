@@ -1,21 +1,27 @@
 <?php
 echo $this->header;
 ?>
-<div id="main">
+<div class="error_main"><br><br><br><br>
+   <div class="error_inner">
 	<h1>404 Seite nicht gefunden</h1>
 
-	<p>Leider konnte Ihre Anfrage nicht richtig verarbeitet werden. Mögliche Ursachen hierfür sind:</p>
-	<ul>
-		<li>die URL die Sie eingegeben haben enthält einen Tippfehler</li>
-		<li>die Seite die Sie versucht haben aufzurufen existiert nicht mehr</li>
-	</ul>
-	<p>
-		Was können Sie jetzt tun?
+	<h3><p>Leider konnte Deine Anfrage nicht richtig verarbeitet werden. <br><br>Mögliche Ursachen hierfür sind:</p></h3>
+       <div class ="liste">
+	<h4><ul>
+		<li>Die URL, die du eingegeben hast, enthält einen Tippfehler  </li>
+		<li>Die Seite, die du versucht hast aufzurufen, existiert nicht mehr</li>
+	</ul></h4></div>
+	<p><br>
+       <h3>Was kannst du jetzt tun?</h3>
 	</p>
-	<ul>
-		<li>prüfen Sie ob die URL tatsächlich richtig ist</li>
-		<li>Nutzen Sie die Navigation um zu der Seite zu gelangen die Sie aufrufen wollten</li>
-	</ul>
+       <div class="liste">
+	<h4><ul>
+		<li>Prüfe ob die URL, die du eingegeben hast, tatsächlich richtig ist </li>
+		<li>Nutze die Navigation, um zu der Seite zu gelangen, die du eig. aufrufen wolltest</li>
+	</ul></h4>
+   </div>
+
+</div>
 </div>
 <?php
 

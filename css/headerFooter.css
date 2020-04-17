@@ -5,7 +5,16 @@ header {
     width: 100%;
 }
 
-.footer{
+header .myNavbar {
+    background-image: url("../images/sky.jpg");
+    background-color: #2aabd2;
+    border-color: #04D5FE;
+    background-blend-mode: screen;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+footer {
     position: absolute;
     color: white;
     bottom: 0px;
@@ -16,6 +25,7 @@ header {
     background-size: cover;
     background-position: center;
     padding-left: 20px;
+    padding-top: 20px;
     font-family: "Comic Sans MS";
     font-size: 15px;
 }

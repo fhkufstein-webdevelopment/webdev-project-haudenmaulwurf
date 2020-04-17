@@ -9,7 +9,20 @@ echo $this->header;
 
 <h1>Scoreboard </h1>
     <p><h3>Hier siehst du deine besten Ergebnisse sowie die generellen Highscores</h3></p>
-    <br><br>
+    <div class="lastScore">
+    <?php if($this->lastScore): ?>
+    <?php foreach($this->lastScore as $scoreObj): ?>
+    <h3 <?php echo "class='".$scoreObj->id." h3_lastscore'" ?>>zuletzt:
+        <?php echo $scoreObj -> points; ?>
+         Punkte
+    </h3>
+        <?php endforeach; ?>
+    <?php else: ?>
+        <p>Es sind noch keine HighScore Einträge vorhanden!</p>
+    <?php endif; ?>
+</div>
+
+
 
 <div class = "tabelle1">
     <?php if($this->userscores): ?>
@@ -19,7 +32,7 @@ echo $this->header;
 
             </tr>
             <?php foreach($this->userscores as $userscoreObj): ?>
-                <tr class="tr_userscores">
+                <tr <?php echo "class='".$userscoreObj->id." tr_userscores'" ?>>
                     <td><?php echo $userscoreObj->tmsp; ?></td>
                     <td class="tabelle1_punkte"><?php echo $userscoreObj->points; ?></td>
                 </tr>
@@ -30,6 +43,8 @@ echo $this->header;
     <?php endif; ?>
     <br>
 </div>
+
+
     <div class ="tabelle2">
 <?php if($this->scores): ?>
 
@@ -38,7 +53,7 @@ echo $this->header;
             <th colspan="2">Highscores global</th>
         </tr>
         <?php foreach($this->scores as $scoreObj): ?>
-            <tr class="tr_highscores">
+            <tr <?php echo "class='".$scoreObj->scoreID." tr_highscores'"?>>
                 <td><?php echo $scoreObj->name; ?></td>
                 <td class="tabelle2_punkte"><?php echo $scoreObj->points; ?></td>
             </tr>
@@ -49,7 +64,7 @@ echo $this->header;
 <?php endif; ?>
 
 </div>
-    <button type="submit" id="back_home" onclick="window.open('./home','_self')" >Home</button>
+    <button type="submit" class="back_home" onclick="window.open('./home','_self')" >Home</button>
 </div>
 </div>
 <?php
@@ -57,6 +72,7 @@ echo $this->header;
 echo $this->footer;
 
 ?>
+<script type="text/javascript" src="js/scoreboard.js"></script>
 
 
 

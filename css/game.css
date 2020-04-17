@@ -1,20 +1,12 @@
-/*
-@font-face {
-    font-family: "Nunito";
-    src: url("../fonts/Nunito-Bold.ttf");
-}
 
- */
-
-body {
+.innerBody {
     background-color: lightgray;
-    margin: 0;
-    padding: 0;
     background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Comic Sans MS";
-
+    height: 100vh;
+    overflow: auto;
 }
 
 /* make screen non selectable */
@@ -38,21 +30,23 @@ img {
     grid-template-columns: auto auto auto;
     margin: auto;
     margin-top: 100px;
-    width: 60vw;
-    height: 70vh;
+    width: 1100px;
+    height: 700px;
     grid-column-gap: 30px;
     align-items: center;
     justify-items: center;
     border: solid 1px black;
     padding-top: 100px;
-    background-color: #3b563f;
+    background-color: #5e8c31;
     border-radius: 25px;
+
+    cursor: url("../images/hammer.png"), auto;
 }
 
 #game.noshow div{display:none;}
 
 .grid-item {
-    padding: 20px;
+    padding: 35px;
 }
 
 .mole {
@@ -93,25 +87,13 @@ img {
     z-index: 1;
 }
 
-@keyframes moleRising {
-    from {
-        bottom: 0%;
-    }
-    50% {
-        bottom: 43%;
-    }
-    to {
-        bottom: 0%;
-        visibility: hidden;
-    }
-}
 
 
 #timer {
     position: absolute;
-    height: 100px;
-    width: 200px;
-    right: calc(20vw - 300px);
+    height: 10vh;
+    width: 10vw;
+    right: 2vw;
     border: 2px solid black;
     border-radius: 25px;
     top: 20vh;
@@ -119,24 +101,23 @@ img {
 
 #pointsCounter {
     position: absolute;
-    height: 100px;
-    width: 200px;
-    right: calc(20vw - 300px);
+    height: 10vh;
+    width: 10vw;
+    right: 2vw;
     top: 32vh;
     border: 2px solid black;
     border-radius: 25px;
-
 }
 
 .audioControllers {
     position: absolute;
-    height: 100px;
-    width: 200px;
-    right: calc(20vw - 300px);
+    height: 10vh;
+    width: 10vw;
+    right: 2vw;
     top: 44vh;
-    border: 2px solid black;
-    border-radius: 25px;
     text-align: center;
+    align-items: center;
+    justify-content: center;
 
 }
 
@@ -145,15 +126,30 @@ img {
     height: 50px;
     border: 1px solid black;
     font-size: 15px;
-    display: block;
 }
+
+.muteButton img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.mouseButton {
+    position: absolute;
+    height: 8vh;
+    width: 8vw;
+    right: 3vw;
+    border: 2px solid black;
+    border-radius: 25px;
+    top: 56vh;
+    font-size: 20px;
+}
+
 
 #additionalItems {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
-    vertical-align: middle;
-    line-height: 100px;
+    line-height: 10vh;
     font-family: "Comic Sans MS";
 }
 
@@ -169,10 +165,12 @@ img {
     height: 100px;
     border: 1px solid black;
     font-size: 25px;
+    color: black;
 }
 
 button:hover {
-    background-color: lightgray;
+    background-color: #CD853F;
+    border-color: #CD853F;
 }
 
 #buttons, #endArea {
@@ -184,7 +182,6 @@ button:hover {
     top: 20%;
     z-index: 10;
     font-family: "Comic Sans MS";
-
 }
 
 #endArea {
@@ -201,4 +198,86 @@ button:hover {
     height: 100px;
     border: 1px solid black;
     font-size: 25px;
+}
+
+/* Anpassen an kleinere Screens */
+@media (max-width: 1600px) {
+    .dirt {
+        background-size: auto 75px;
+        background-repeat: no-repeat;
+    }
+
+    .mole {
+        height: 75px;
+    }
+
+
+    #game {
+        height: 520px;
+        width: 800px;
+    }
+
+    #additionalItems {
+        font-size: 20px;
+    }
+
+    @keyframes moleRising {
+        from {
+            bottom: 0%;
+        }
+        50% {
+            bottom: 45%;
+        }
+        to {
+            bottom: 0%;
+            visibility: hidden;
+        }
+    }
+
+    /* Damit Animationen in Firefox auch richtig aussehen */
+    @-moz-document url-prefix() {
+        @keyframes moleRising {
+            from {
+                bottom: 0%;
+            }
+            50% {
+                bottom: 100%;
+    }
+            to {
+                bottom: 0%;
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+@media (min-width: 1601px) {
+    @keyframes moleRising {
+        from {
+            bottom: 0%;
+        }
+        50% {
+            bottom: 50%; /*todo: also depending on height */
+        }
+        to {
+            bottom: 0%;
+            visibility: hidden;
+        }
+    }
+
+    /* Damit Animationen in Firefox auch richtig aussehen */
+    @-moz-document url-prefix() {
+        @keyframes moleRising {
+            from {
+                bottom: 0%;
+            }
+            50% {
+                bottom: 100%; /*todo: also depending on height */
+            }
+            to {
+                bottom: 0%;
+                visibility: hidden;
+            }
+        }
+    }
 }

@@ -20,6 +20,10 @@
         <link href="css/game.css" rel="stylesheet">
     <?php elseif($this->current == "rules"): ?>
         <link href="css/rules.css" rel="stylesheet">
+    <?php elseif($this->current == "logout"): ?>
+        <link href="css/logout.css" rel="stylesheet">
+    <?php elseif($this->current == "404"): ?>
+        <link href="css/404.css" rel="stylesheet">
     <?php else: ?>
         <link href="css/main.css" rel="stylesheet">
     <?php endif; ?>
@@ -43,14 +47,10 @@
 <header>
 	<div class="inner">
 		<div class="logo">
-		<!--	<div class="name">HAU DEN MAULWURF</div>
-			<div class="version">1.0</div> -->
 		</div>
-
-		<?php if(LOGGED_IN == true): ?>
-			<nav class="navbar navbar-default">
+        <?php if(LOGGED_IN == true): ?>
+			<nav class="navbar navbar-default myNavbar">
 				<div class="container-fluid">
-					<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 							<span class="sr-only">Toggle navigation</span>
@@ -73,13 +73,14 @@
 					</div>
 				</div>
 			</nav>
-		<?php else: ?>
-			<nav class="mainnav">
+
+        <?php else: ?>
+			 <!--<nav class="mainnav">
 				<ul class="nav nav-pills">
 					<li<?php if($this->current == "login"): ?>class="active"<?php endif; ?>><a href="login">Login</a></li>
 				</ul>
-			</nav>
-		<?php endif; ?>
+			</nav> -->
+		<?php endif;  ?>
 
 	</div>
 </header>

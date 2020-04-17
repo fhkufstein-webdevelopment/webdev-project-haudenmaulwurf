@@ -3,7 +3,7 @@ const settings = {
     moles: 9,
     difficulty: 2, // difficulty 1-3; 1 easy, 2 medium, 3 hard
     counter: 0,
-    length: 10, // in Sekunden
+    length: 30, // in Sekunden
 };
 
 // Musik definieren

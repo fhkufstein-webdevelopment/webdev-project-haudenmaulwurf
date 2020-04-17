@@ -201,7 +201,7 @@ button:hover {
 }
 
 /* Anpassen an kleinere Screens */
-@media (max-width: 1400px) {
+@media (max-width: 1600px) {
     .dirt {
         background-size: auto 75px;
         background-repeat: no-repeat;
@@ -251,7 +251,7 @@ button:hover {
     }
 }
 
-@media (min-width: 1401px) {
+@media (min-width: 1601px) {
     @keyframes moleRising {
         from {
             bottom: 0%;

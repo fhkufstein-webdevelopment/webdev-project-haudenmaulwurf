@@ -35,10 +35,18 @@ Wir benötigen folgende Angaben um Sie für unseren Dienst registrieren zu könn
                         <?php
                         /* Verbindung aufnehmen*/
                         $name = $_POST["name"];$pwd=$_POST["pwd"];
-                        $con = new MySQLi("localhost", "root", "", "");if ($con->connect_error) {echo "Fehler bei der Verbindung: " . mysqli_connect_error();exit();}
+                        $con = new MySQLi("localhost", "root", "", "");
+                        if ($con->connect_error) {echo "Fehler bei der Verbindung: " . mysqli_connect_error();exit();}
                         $sql = "INSERT INTO  (name, pwd) VALUES ('$name', '$pwd')";
-                        $ergebnis = mysqli_query($con, $sql)or die("Fehler bei der Datenbankabfrage.");
-                        echo "Danke für die Anmeldung, es handelt sich um $name $pwd.  Viel Spass im Spiel";
+                        $ergebnis=mysqli_query($con,$sql)or die("Fehler bei der Datenabfrage.");
+
+                        /*Feedbackausgabe*/
+                        if($ergebnis->execute()){
+                            header('Location: index.php?aktion=feedbackgespeichert');
+                            die();}
+                        if (isset($_POST['aktion']) and $_POST['aktion']=='feedbackgespeichert') {
+                            echo '<p class="feedbackerfolg">Herzlichen Glückwunsch. Wilkommen und viel Spaß';
+                        }
                         ?>
 
                     </form>

@@ -1,13 +1,13 @@
 const settings = {
     game: document.getElementById("game"),
     moles: 9,
-    // difficulty 1-3; 1 easy, 2 medium, 3 hard
-    difficulty: 2,
+    difficulty: 2, // difficulty 1-3; 1 easy, 2 medium, 3 hard
     counter: 0,
+    length: 10, // in Sekunden
 };
 
-let myMusic;
-myMusic = new sound("images/molegamemusic.mp3", "backgroundMusic");
+// Musik definieren
+let myMusic = new sound("images/molegamemusic.mp3", "backgroundMusic");
 
 
 $(document).ready(function () {
@@ -15,26 +15,28 @@ $(document).ready(function () {
     $(".difficultyButton").click(function () {
         let buttonDiv = document.getElementById("buttons");
         let difficultyButtons = $(".difficultyButton");
+        // Schwierigkeit and Settings übergeben
         settings.difficulty = parseInt($(this).val(), 10);
+
+        // Buttons verschwinden lassen
         for (let i = 0; i < difficultyButtons.length; i++) {
             difficultyButtons[i].style.display = "none";
         }
-        init();
-
         buttonDiv.style.display = "none";
 
-        //Music
-        myMusic.play();
-        $("#backgroundMusic")[0].volume = 0.3; // ![0]
-        console.log($("#backgroundMusic"));
+        // Init -> Moles etc. werden gespawned
+        init();
 
-        // damit man es auf den ersten Press gleich stoppen kann
-        musicMuteCounter = 1;
+        //Music starten
+        myMusic.play();
     });
 });
 
+// Variablen definieren
+let timeID; // zum Stoppen, wenn Zeit abgelaufen
+let spawnIntervals = []; // Array zum Abspeichern jedes einzelnen Spawnintervalls
+
 function init() {
-    let timer = document.getElementById("timer");
     let speed;
     switch (settings.difficulty) {
         case 1:
@@ -66,7 +68,7 @@ function init() {
         moleImage.src = "images/firstMole.svg";
         moleImage.classList = "mole";
 
-        let spawnInterval = setInterval(() => {
+        spawnIntervals[index] = setInterval( () => {
             colorSetter(moleImage);
             $("#game").removeClass("noshow");
 
@@ -76,50 +78,13 @@ function init() {
                     moleImage.classList.toggle("alive");
                 }
             }
-
             for (let i = 0; i < $(".alive").length; i++) {
                 $(".alive")[i].style.animationDuration = speed.toString() + "s";
             }
-        }, 100); //update interval
 
-        // remove alive after animation ends
-        $(mole).on("animationend webkitAnimationEnd", function () {
-            if (moleImage.classList.contains("alive")) {
-                moleImage.classList.toggle("alive");
-            }
-            if (moleImage.classList.contains("normalMole")) {
-                moleImage.classList.remove("normalMole");
-            } else if (moleImage.classList.contains("redMole")) {
-                moleImage.classList.remove("redMole");
-            } else if (moleImage.classList.contains("yellowMole")) {
-                moleImage.classList.remove("yellowMole");
-            }
-        });
+        }, 100);
 
-        // TIMER
-        let time = 30; // in Sekunden
-        let timeID; // zum Stoppen, wenn Zeit abgelaufen
-        function drawElapsedTime() {
-            if (time < 0) {
-                // countdown stoppen und spawnen von Maulwürfen stoppen
-                clearInterval(timeID);
-                clearInterval(spawnInterval);
-                myMusic.stop();
-                for (let i = 0; i < settings.moles; i++) {
-                    moleImage.classList.remove("alive");
-                }
-                // Endbutton erscheinen lassen
-                let endArea = document.getElementById("endArea");
-                endArea.style.display = "block";
-                let endButton = document.getElementById("endButton");
-                endButton.style.display = "block";
-            } else {
-                $(timer).text(time + " secs");
-                time--;
-            }
-        }
-        timeID = setInterval(drawElapsedTime, 1000);
-
+        // Jedem Mole einen Eventlistener hinzufügen
         moleImage.addEventListener("click", (event) => {
             if (event.target.classList.contains("alive")) {
                 let counterText = document.getElementById("pointsCounter");
@@ -143,7 +108,57 @@ function init() {
         // div an game-bereich hängen
         settings.game.appendChild(mole);
     }
+    // Timer starten (alle 1000 Millieskunden Aktualisierung)
+    timeID = setInterval(drawElapsedTime, 1000);
+
+    // remove alive after animation ends
+    $(".grid-item").on("animationend webkitAnimationEnd", function () {
+        let currentMoleImage = this.childNodes[1];
+        if (currentMoleImage.classList.contains("alive")) {
+            currentMoleImage.classList.toggle("alive");
+        }
+
+        if (currentMoleImage.classList.contains("normalMole")) {
+            currentMoleImage.classList.remove("normalMole");
+        } else if (currentMoleImage.classList.contains("redMole")) {
+            currentMoleImage.classList.remove("redMole");
+        } else if (currentMoleImage.classList.contains("yellowMole")) {
+            currentMoleImage.classList.remove("yellowMole");
+        }
+    });
+
 }
+
+// Timer; stoppt Spiel wenn Zeit abgelaufen
+let timer = document.getElementById("timer");
+function drawElapsedTime() {
+    if (settings.length <= 0) {
+        $(timer).text(settings.length + " s");
+
+        // countdown stoppen und spawnen von Maulwürfen stoppen
+        clearInterval(timeID);
+        // Musik stoppen
+        myMusic.stop();
+
+        let moleImage = $(".mole");
+        for (let i = 0; i < moleImage.length; i++) {
+            if (moleImage[i].classList.contains("alive")) {
+                moleImage[i].classList.remove("alive");
+            }
+            clearInterval(spawnIntervals[i]);
+        }
+
+        // Endbutton erscheinen lassen
+        let endArea = document.getElementById("endArea");
+        endArea.style.display = "block";
+        let endButton = document.getElementById("endButton");
+        endButton.style.display = "block";
+    } else {
+        $(timer).text(settings.length + " s");
+        settings.length--;
+    }
+}
+
 
 // senden der daten am ende
 $("#endButton").click(function () {
@@ -156,7 +171,6 @@ $("#endButton").click(function () {
     }).done(function() {
         window.location.href = "/webdev-project-haudenmaulwurf/scoreboard";
     });
-
 });
 
 // auswählen welche farbe der maulwurf haben soll
@@ -191,6 +205,7 @@ function colorSetter(moleImage) {
     }
 }
 
+// Audio Element Vorlage
 // Added Music: https://www.w3schools.com/graphics/game_sound.asp
 // https://opengameart.org/content/caketown-cuteplayful
 function sound(src, id) {
@@ -212,10 +227,11 @@ function sound(src, id) {
     }
 }
 
+// Music stoppen/spielen lassen und Button Anzeige ändern
 let musicMuteCounter = 0;
 let muteIcon = document.getElementById("mute");
 $(".muteButton").click(function () {
-    if (musicMuteCounter % 2 == 1) {
+    if (musicMuteCounter % 2 == 0) {
         myMusic.stop();
         muteIcon.src = "images/muteButton.png"
     } else {
@@ -225,6 +241,7 @@ $(".muteButton").click(function () {
     musicMuteCounter++;
 });
 
+// Volume höher oder niedriger stellen
 $(".volumeButton").click(function () {
     if(this.classList.contains("volumeUp")) {
         volumeUp()
@@ -238,9 +255,20 @@ function volumeDown() {
         $("#backgroundMusic")[0].volume -= 0.1;
     }
 }
-
 function volumeUp() {
     if($("#backgroundMusic")[0].volume <= 0.9) {
         $("#backgroundMusic")[0].volume += 0.1;
     }
 }
+
+// Maus ändern (zu normaler Maus) oder wieder zur speziellen Hammer Maus
+let mouseCounter = 0;
+$(".mouseButton").click(function () {
+    let gameField = document.getElementById("game");
+    if(mouseCounter % 2 == 0) {
+        gameField.style.cursor = "auto";
+    } else {
+        gameField.style.cursor = "url(\"images/hammer.png\"), auto";
+    }
+    mouseCounter++;
+});

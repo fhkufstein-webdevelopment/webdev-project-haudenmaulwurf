@@ -25,6 +25,9 @@ echo $this->header;
         <button class="volumeButton volumeDown"><b>--</b></i></button>
         <button class="volumeButton volumeUp"><b>++</b></i></button>
     </div>
+    <div>
+        <button class="mouseButton">Maus ändern</button>
+    </div>
 </div>
 <script type="text/javascript" src="js/game.js"></script>
 <?php

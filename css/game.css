@@ -40,9 +40,8 @@ img {
     background-color: #3b563f;
     border-radius: 25px;
 
-    /*cursor: url("../images/hammer.png"), auto;
+    cursor: url("../images/hammer.png"), auto;
 
-     */
 }
 
 #game.noshow div{display:none;}
@@ -139,14 +138,24 @@ img {
     max-height: 100%;
 }
 
-/*todo: change to the right place */
+.mouseButton {
+    position: absolute;
+    height: 8vh;
+    width: 8vw;
+    right: 3vw;
+    border: 2px solid black;
+    border-radius: 25px;
+    top: 56vh;
+    font-size: 20px;
+}
+
+
 #additionalItems {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
     line-height: 10vh;
     font-family: "Comic Sans MS";
-    display: table;
 }
 
 
@@ -196,6 +205,7 @@ button:hover {
     font-size: 25px;
 }
 
+/* Anpassen an kleinere Screens */
 @media (max-width: 1400px) {
     .dirt {
         background-size: auto 75px;
@@ -229,6 +239,21 @@ button:hover {
         }
     }
 
+    /* Damit Animationen in Firefox auch richtig aussehen */
+    @-moz-document url-prefix() {
+        @keyframes moleRising {
+            from {
+                bottom: 0%;
+            }
+            50% {
+                bottom: 100%; /*todo: also depending on height */
+            }
+            to {
+                bottom: 0%;
+                visibility: hidden;
+            }
+        }
+    }
 }
 
 @media (min-width: 1401px) {
@@ -242,6 +267,22 @@ button:hover {
         to {
             bottom: 0%;
             visibility: hidden;
+        }
+    }
+
+    /* Damit Animationen in Firefox auch richtig aussehen */
+    @-moz-document url-prefix() {
+        @keyframes moleRising {
+            from {
+                bottom: 0%;
+            }
+            50% {
+                bottom: 100%; /*todo: also depending on height */
+            }
+            to {
+                bottom: 0%;
+                visibility: hidden;
+            }
         }
     }
 }

@@ -1,104 +1,86 @@
-body{
+.login_main {
     background-image: url("../images/background.jpg");
-    background-size: cover;
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
 }
-h1{
+.login_inner {
+    background-size: 100%;
+    background-image: url("../images/erde.png");
+    background-repeat: no-repeat;
+    width: 990px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Comic Sans MS";
+    padding: 60px;
+    height: 80%;
     color: white;
-    padding-bottom: 10px;
+}
+
+h1 {
+    padding-bottom: 0px;
     font-size: 55px;
     text-transform: uppercase;
     font-weight: bold;
 }
-#main{
-    background-image: url("../images/erde.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    font-family: "Comic Sans MS";
-    color: white;
-    width: 990px;
-    margin: 0 auto;
-    background-size: 100%;
-    margin-top: 50px;
-    height: 80%;
-}
-#main p{
-    font-size: 120%;
-    font-weight: bold;
-    text-align: center;
-}
-#main button{
-    font-family: "Comic Sans MS";
-    font-weight: bold;
-    font-size: 150%;
-    text-align: center;
-    display: inline-block;
+
+a {
     color: #CD853F;
-    border: none;
-    border-radius: 20%;
-    background-color: dimgray;
-    margin-left: 20px;
+    font-weight: bold;
 }
-button:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7), 0 6px 20px 0 rgba(0,0,0,0.4);
+
+a:hover{
+    color: #CD853F;
 }
-.row {
-    display: inline-block;
-    text-align: center;
+
+#username{
+    width: 550px;
+    position: absolute;
+    left: 10%;
+    top: 600%;
 }
-p a{
-    text-decoration: none;
+#password{
+    width: 550px;
+    position: absolute;
+    left: 10%;
+    top: 1600%;
+}
+#go_button{
+    width: 160px;
+    height: 60px;
+    color: black;
+    font-size: 25px;
+    border-color: white;
+
+}
+
+#go_button:hover{
+    color: saddlebrown;
+    border-color: saddlebrown;
+}
+
+h4{
+    font-size: 24px;
+    padding-left: 8px;
+}
+
+h2{
+    color:black;
     font-family: "Comic Sans MS";
     font-weight: bold;
-    font-size: 150%;
-    text-align: center;
-    display: inline-block;
-    color: lightgray;
-    border: none;
-    border-radius: 20%;
-    background-color: dimgray;
 }
-p a:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7), 0 6px 20px 0 rgba(0,0,0,0.4);
-}
-.btn-default{
-    float: right;
-    margin-bottom: 10px;
-    margin-right: 10px;
-}
-.form-control{
-    font-family: "Comic Sans MS";
-    border: none;
-    border-radius: 12px;
-}
-::placeholder{
-    font-family: "Comic Sans MS";
-    color: dimgray;
-}
-.close{
-    text-align: center;
-    display: inline-block;
-    border: none;
-    border-radius: 20%;
-    background-color: dimgray;
-}
-.close:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7), 0 6px 20px 0 rgba(0,0,0,0.4);
-}
-.footer{
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    background-image: url("../images/erde.png");
+.modal-content{
+    background-image: url("../images/himmel.jpg");
     background-repeat: no-repeat;
-    height: 60px;
     background-size: cover;
     background-position: center;
 }
 
-.form-group {
-    width: 700px;
-    padding-left: 20px;
+
+h5{
+    color: black;
+    font-family: "Comic Sans MS";
 
 }
-

@@ -10,8 +10,8 @@
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 
 	<?php if($this->current == "login"): ?>
-		<link href="css/login.css" rel="stylesheet">
-        <link href="css/registrierung.css" rel="stylesheet">
+		<link href="css/toastr.min.css" rel="stylesheet">
+        <link href="css/login.css" rel="stylesheet">
     <?php elseif($this->current == "scoreboard"): ?>
         <link href="css/scoreboard.css" rel="stylesheet">
     <?php elseif($this->current == "home"): ?>
@@ -35,8 +35,7 @@
 
 	<?php if($this->current == "index"): ?>
 		<script type="text/javascript" src="js/core.js"></script>
-	<?php elseif($this->current == "register"): ?>
-		<script type="text/javascript" src="js/register.js"></script>
+
 	<?php elseif($this->current == "login"): ?>
 		<script type="text/javascript" src="js/toastr.min.js"></script>
 		<script type="text/javascript" src="js/login.js"></script>

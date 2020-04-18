@@ -49,7 +49,7 @@ function init() {
             speed = 1.2;
             break;
         case 999:
-            speed = 0.3;
+            speed = 0.5;
             break;
     }
 
@@ -159,7 +159,6 @@ function drawElapsedTime() {
     }
 }
 
-
 // senden der daten am ende
 $("#endButton").click(function () {
     // Daten senden an DB
@@ -202,6 +201,8 @@ function colorSetter(moleImage) {
         } else {
             moleImage.classList.add("normalMole");
         }
+    } else if (settings.difficulty == 999 && !alreadySet) {
+        moleImage.classList.add("normalMole");
     }
 }
 

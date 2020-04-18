@@ -15,6 +15,7 @@
     background: none;
 }
 
+/* makes image non dragable */
 img {
     user-drag: none;
     user-select: none;
@@ -43,18 +44,20 @@ img {
     cursor: url("../images/hammer.png"), auto;
 }
 
-#game.noshow div{display:none;}
+#game.noshow div {
+    display:none;
+}
 
 .grid-item {
     padding: 35px;
 }
 
+/* Different Mole Styles */
 .mole {
     height: 100px;
     visibility: hidden;
 }
 
-/* Different Mole Types */
 .redMole {
     content: url("../images/redMole.svg");
 }
@@ -63,6 +66,16 @@ img {
     content: url("../images/yellowMole.svg");
 }
 
+.alive {
+    visibility: visible;
+    position: relative;
+    animation-name: moleRising;
+    animation-duration: 2s; /* set in js when doing difficulties */
+    animation-fill-mode: forwards;
+    z-index: 1;
+}
+
+/* Dirt Div Styling */
 .dirt {
     position: absolute;
     height: 100px;
@@ -78,37 +91,33 @@ img {
 
 }
 
-.alive {
-    visibility: visible;
-    position: relative;
-    animation-name: moleRising;
-    animation-duration: 2s; /* set in js when doing difficulties */
-    animation-fill-mode: forwards;
-    z-index: 1;
+/* Timer and Counter Styles */
+#additionalItems {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 10vh;
+    font-family: "Comic Sans MS";
 }
 
-
-
-#timer {
+#additionalItems div {
     position: absolute;
     height: 10vh;
     width: 10vw;
     right: 2vw;
     border: 2px solid black;
     border-radius: 25px;
+}
+
+#timer {
     top: 20vh;
 }
 
 #pointsCounter {
-    position: absolute;
-    height: 10vh;
-    width: 10vw;
-    right: 2vw;
     top: 32vh;
-    border: 2px solid black;
-    border-radius: 25px;
 }
 
+/* Audio Controllers Styles */
 .audioControllers {
     position: absolute;
     height: 10vh;
@@ -118,7 +127,6 @@ img {
     text-align: center;
     align-items: center;
     justify-content: center;
-
 }
 
 .muteButton {
@@ -133,6 +141,7 @@ img {
     max-height: 100%;
 }
 
+/* Mouse Toggle Styles */
 .mouseButton {
     position: absolute;
     height: 8vh;
@@ -144,17 +153,7 @@ img {
     font-size: 20px;
 }
 
-
-#additionalItems {
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 10vh;
-    font-family: "Comic Sans MS";
-}
-
-
-/* Buttons */
+/* Startbuttons und allg. Buttons */
 #buttons {
     width: 200px;
     height: 200px;
@@ -184,6 +183,7 @@ button:hover {
     font-family: "Comic Sans MS";
 }
 
+/* Go to Scoreboard Button */
 #endArea {
     width: 200px;
     top: 40%;
@@ -200,7 +200,7 @@ button:hover {
     font-size: 25px;
 }
 
-/* Anpassen an kleinere Screens */
+/* Anpassen an kleinere Screens (bzw. Laptops */
 @media (max-width: 1600px) {
     .dirt {
         background-size: auto 75px;

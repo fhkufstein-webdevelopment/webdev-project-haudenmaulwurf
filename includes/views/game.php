@@ -4,10 +4,6 @@ echo $this->header;
 
 ?>
 <div class="innerBody">
-    <div id="additionalItems">
-        <div id="pointsCounter">Punkte:</div>
-        <div id="timer">Zeit</div>
-    </div>
     <div id="game" class="noshow"></div>
 
     <div id="buttons">
@@ -19,6 +15,12 @@ echo $this->header;
     <div id="endArea">
         <button id="endButton">Zeige Highscores</button>
     </div>
+
+    <div id="additionalItems">
+        <div id="pointsCounter">Punkte:</div>
+        <div id="timer">Zeit</div>
+    </div>
+
     <div class="audioControllers">
         <button class="muteButton"><img src="./images/unmutedButton.png" id="mute"></i></button>
         <br>

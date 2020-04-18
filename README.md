@@ -1,47 +1,49 @@
-# baseproject
+# Projekt Hau den Maulwurf
 
-Dieses Repository können Sie als Studenten der FH Kufstein des Kurses Web Development gerne als Basis für Ihre Projektarbeit nehmen.
+Dieses Projekt ist mit viel Liebe (und manchmal auch mit etwas Hass) entstanden. Wir haben uns alle sehr viel Mühe gegeben und versucht, es so gut wie möglich zu machen.
+Auch wenn es uns am Anfang vor ein recht großes Fragezeichen gestellt hat, so finden wir einstimmig, dass wir sehr viel gelernt haben und es die Mühe wert war. 
 
-Sollten Sie irgendwo über ein (c) copyright Daniel Hoover stoßen können Sie dieses gerne entfernen. Ich erhebe kein Copyright auf diesen Quelltext.
+## Teammitglieder
 
-## Konfiguration
-
-Passen Sie bitte die Dateien /.htaccess, /includes/dbconfig.php und /includes/config.php entsprechend an. 
+Ascher Sabine, Exenberger Lea, Klammsteiner Mirjam
 
 ## Grundsätzliche Nutzung
 
-### Routen
+### Login bzw. Registierung
 
-Sie müssen in der Datei includes/routes.php entsprechende Routen definieren. Also bekannt geben für welche URL welcher Controller zu nutzen ist.
+Um das Spiel spielen zu können ist eine Anmeldung erforderlich
 
-### View & Controller
-Jeder View braucht einen eigenen Controller! Views liegen im Verzeichnis /includes/views/. Controller liegen im Verzeichnis /includes/views/controllers/
+### Spielregeln
+Bevor man das Spiel startet, sollte man sich mit den Spielregeln vertraut machen, denn die Farben der Maulwürfe haben unterschiedliche Bedeutungen
 
-### Model
-Häufig macht es Sinn, dass Sie für jede Tabelle ein eigenes Model schreiben. Models finden Sie in /includes/models/
+### Spielmodus
+Man kann sich zwischen "einfach", "mittel", "schwierig" und "unmöglich" entscheiden. Wer es schafft im "unmöglich" Modus Punkte zu erzielen, kann sich gut und gerne 
+als "Meister" bezeichnen. 
 
-### REST Klassen
+### Mauszeiger und Musik
 
-Jeder Restservice hat auch eine eigene Klasse und erbt von RESTClass. Einen Restservice machen Sie in der Datei /includes/restservices.php bekannt.
-Der Aufruf eines Restservices User über die API würde über /api/user/ erfolgen. (Die Klasse wird im REST Servicerequest dann Kleingeschrieben)
+Im Hintergrund des Spiels spielt Musik. Sollte diese unerwünscht sein, kann man sie einfach ausschalten. Außerdem wird der Cursor als Hammer dargestellt.
+Wenn man lieber seinen "normalen" will, so geht das ganz einfach mit dem Klick auf den Button "Maus ändern".
 
-#### GET Request
+### Highscore
 
-Holen von Daten / Views. Ruft die Methode getRequest auf - in $data finden Sie alle übergebenen Parameter (Variablen des GET Requests)
+Im Home-Menü und am Ende eines Spieles werden einem seine eigenen Highscores, seine letzten Punkte und die Highscores global angezeigt. 
 
-#### POST Request
+## Wer hat was gemacht?
 
-Erzeugen von Daten. z.B. das anlegen eines neuen Nutzers. Ruft die Methode createRequest auf - in $data finden Sie alle übergebenen Parameter (Variablen des POST Requests)
+Dies klar abzugrenzen ist schwierig. 
+Mirjam war sozusagen unsere "Alleswisserin", die immer geholfen hat, wenn jemand nicht weitergekommen ist. Sie hat sich
+um die ganze Spiellogik gekümmert und darum, dass der Highscore in die Datenbank geschickt wird. Außerdem gehen viele "Kleinigkeiten" (die sich
+aber dann trotzdem ganz schön aufsummieren) auf sie zurück wie etwa das Bild im Header, ein schöner Footer oder das Highlighten in den Highscores, sollte man dort mit seinen Punkten aufscheinen. 
 
-#### PUT Request
+Lea war unsere CSS-Koryphäe. Ich glaube, keiner beherrscht das so gut wie sie. Allerdings mag es vielleicht auf den ersten Blick so erscheinen, dass weniger Datein 
+von ihr sind. Das liegt daran, dass wir uns später anders entschieden haben und andere Herangehensweisen verwendet haben. Doch Lea hat genauso ihren Beitrag geleistet wie wir anderen. 
+Sie hat zum Beispiel den ersten Entwurf für die Home-Seite mit der dazugehörigen CSS geschrieben, außerdem eine Login-Site und die Registrierung, die es dann aber leider 
+aufgrund von Internet-Problemen auch nicht direkt in das fertige Konzept geschafft haben. 
 
-Speichern von Daten. z.B. das speichern von Daten nach ändern eines Nutzers. Ruft die Methode saveRequest auf - in $data finden Sie alle übergebenen Parameter (Variablen des PUT Requests)
+ 
 
-#### DELETE Request
+## Schlusswort
 
-Löschen von Daten. z.B. das löschen von Nutzern. Ruft die Methode deleteRequest auf - in $data finden Sie alle übergebenen Parameter (Variablen des DELETE Requests)
+Wir haben gut zusammengearbeitet und sind stolz darauf, was aus diesem Projekt geworden ist. 
 
-## Tutorial
-
-Ein kleines Tutorial um mit der Erweiterung und Nutzung dieses kleinen Frameworks warm zu werden finden Sie hier:
-https://github.com/danielhoover/baseproject/wiki/Tutorial

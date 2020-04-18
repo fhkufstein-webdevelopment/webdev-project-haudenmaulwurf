@@ -42,7 +42,7 @@ von ihr sind. Das liegt daran, dass wir uns später anders entschieden haben und
 Sie hat zum Beispiel den ersten Entwurf für die Home-Seite mit der dazugehörigen CSS geschrieben, außerdem eine Login-Site und die Registrierung, die es dann aber leider 
 aufgrund von Internet-Problemen auch nicht direkt in das fertige Konzept geschafft haben. 
 
-Sabine hat sich intensiv mit der Datenbank auseinandergesetzt. Sie hat sich besonders um das Scoreboard gekümmert und dafür gesorgt, dass alles richtig abgerufen wird. Besonders die Controller, Models und Restservices sind ihr Machwerk. Auch hat sie immer wieder ausgezeichente Änderungen des CSS vorgenommen um unsere Webseite noch besser wirken zu lassen. Auch das Weiterleiten von Seite zu Seite hat sie übernommen.
+Sabine hat sich intensiv mit der Datenbank auseinandergesetzt. Sie hat sich besonders um das Scoreboard gekümmert und dafür gesorgt, dass alles richtig abgerufen wird. Auch die Controller, Models und Restservices sind ihr Machwerk. Außerdem hat sie immer wieder ausgezeichente Änderungen des CSS vorgenommen um unsere Webseite noch besser wirken zu lassen. Auch das Weiterleiten von Seite zu Seite hat sie übernommen.
 Ihre Ideen wie einen Custom-Cursos hinzuzufügen und das Highlighten des momentanen Scores im Scoreboard haben unser Projekt schön abgerundet.
 
 ## Schlusswort
